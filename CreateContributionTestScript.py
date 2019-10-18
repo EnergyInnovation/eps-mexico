@@ -21,7 +21,7 @@ OutputVarsFile = "OutputVarsToExport.lst" # The name of the file containing a li
 # Other Settings
 # --------------
 RunName = "MostRecentRun" # The desired name for all runs performed.  Used as the filename for the VDF files that Vensim creates
-EnableOrDisableGroups = "Enable" # Should each group be enabled or disabled in turn?
+EnableOrDisableGroups = "Disable" # Should each group be enabled or disabled in turn?
 								 # Essentially, this is testing either the contribution of a group in the proximity of the
 								 # BAU case ("Enable") or in the proximity of a scenario defined in the non-zero values of
 								 # the policies listed below ("Disable").
@@ -50,156 +50,145 @@ Group = 4
 # Vensim will be unable to complete the necessary runs in a reasonable amount of time.
 # Each policy is on a single line.  You may change the first entry of each policy to
 # "True" to enable the policy or "False" to disable it.
+# The second and third entries are the long and short name of the policy, used internally
+# by this script.  Do not change these names.
 # The fourth entry in each policy is a list of setting values enclosed with square brackets.
 # You may change these values, add more values (separated by commas), and delete values.
 # Any enabled policy must have a minimum of one setting value.  A policy that is disabled
 # and a policy with a setting of zero produce identical results.
-# The fifth entry in each policy is its group number.  By default, each policy has its
-# own group number.  Change these numbers so multiple policies share a group number (or a
-# group name in quotes, like "financial policies") to cause them to be enabled or disabled
-# together.
+# The fifth entry in each policy is its group name.  By default, each policy is in its
+# own group.  Change these names so multiple policies share a name (like "financial
+# policies") to cause them to be enabled or disabled together.
 
 # Transportation Sector Policies
-ElecPsgrLDVs = (False,"Percent Nonelec Vehicles Shifted to Elec[passenger,LDVs]","ElecPsgrLDVs",[0,.1],1)
-ElecPsgrHDVs = (False,"Percent Nonelec Vehicles Shifted to Elec[passenger,HDVs]","ElecPsgrHDVs",[0,.1],2)
-Feebate = (False,"LDVs Feebate Rate","Feebate",[0,1940],3)
-FuelEconLDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[LDVs]","FuelEconLDVs",[0,.22],4)
-FuelEconHDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[HDVs]","FuelEconHDVs",[0,.46],5)
-TDM = (False,"Fraction of TDM Package Implemented","TDM",[0,1],6)
+Feebate = (False,"LDVs Feebate Rate","Feebate",[0,1],"FeebateGroup")
+FuelEconLDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,LDVs]","FuelEconLDVs",[0,1],"FuelEconLDVsGroup")
+FuelEconHDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[diesel vehicle,HDVs]","FuelEconHDVs",[0,.66],"FuelEconHDVsGroup")
+FuelEconAircraft = (False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,aircraft]","FuelEconAircraft",[0,.54],"FuelEconAircraftGroup")
+FuelEconRail = (False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,rail]","FuelEconRail",[0,.2],"FuelEconRailGroup")
+FuelEconShips = (False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,ships]","FuelEconShips",[0,.2],"FuelEconShipsGroup")
+FuelEconMtrbks = (False,"Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,motorbikes]","FuelEconMtrbks",[0,.74],"FuelEconMtrbksGroup")
+PsgrTDM = (False,"Fraction of TDM Package Implemented[passenger]","PsgrTDM",[0,1],"PsgrTDMGroup")
+FrgtTDM = (False,"Fraction of TDM Package Implemented[freight]","FrgtTDM",[0,1],"FrgtTDMGroup")
+LCFS = (False,"Additional LCFS Percentage","LCFS",[0,.2],"LCFSGroup")
 
 # Buildings and Appliances Sector Policies
-RebateHeating = (False,"Boolean Rebate Program for Efficient Components[heating]","RebateHeating",[0,1],7)
-RebateCooling = (False,"Boolean Rebate Program for Efficient Components[cooling and ventilation]","RebateCooling",[0,1],8)
-RebateAppliances = (False,"Boolean Rebate Program for Efficient Components[appliances]","RebateAppliances",[0,1],9)
-BldgStdsUrbResHeating = (False,"Reduction in E Use Allowed by Component Eff Std[heating,urban residential]","BldgStdsUrbResHeating",[0,.68],10)
-BldgStdsUrbResCooling = (False,"Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,urban residential]","BldgStdsUrbResCooling",[0,.68],11)
-BldgStdsUrbResEnvelope = (False,"Reduction in E Use Allowed by Component Eff Std[envelope,urban residential]","BldgStdsUrbResEnvelope",[0,.68],12)
-BldgStdsUrbResLighting = (False,"Reduction in E Use Allowed by Component Eff Std[lighting,urban residential]","BldgStdsUrbResLighting",[0,.68],13)
-BldgStdsUrbResAppliances = (False,"Reduction in E Use Allowed by Component Eff Std[appliances,urban residential]","BldgStdsUrbResAppliances",[0,.68],14)
-BldgStdsUrbResOther = (False,"Reduction in E Use Allowed by Component Eff Std[other component,urban residential]","BldgStdsUrbResOther",[0,.68],15)
-BldgStdsRurResHeating = (False,"Reduction in E Use Allowed by Component Eff Std[heating,rural residential]","BldgStdsRurResHeating",[0,.68],116)
-BldgStdsRurResCooling = (False,"Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,rural residential]","BldgStdsRurResCooling",[0,.68],117)
-BldgStdsRurResEnvelope = (False,"Reduction in E Use Allowed by Component Eff Std[envelope,rural residential]","BldgStdsRurResEnvelope",[0,.68],118)
-BldgStdsRurResLighting = (False,"Reduction in E Use Allowed by Component Eff Std[lighting,rural residential]","BldgStdsRurResLighting",[0,.68],119)
-BldgStdsRurResAppliances = (False,"Reduction in E Use Allowed by Component Eff Std[appliances,rural residential]","BldgStdsRurResAppliances",[0,.68],120)
-BldgStdsRurResOther = (False,"Reduction in E Use Allowed by Component Eff Std[other component,rural residential]","BldgStdsRurResOther",[0,.68],121)
-BldgStdsComHeating = (False,"Reduction in E Use Allowed by Component Eff Std[heating,commercial]","BldgStdsComHeating",[0,.68],122)
-BldgStdsComCooling = (False,"Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,commercial]","BldgStdsComCooling",[0,.68],123)
-BldgStdsComEnvelope = (False,"Reduction in E Use Allowed by Component Eff Std[envelope,commercial]","BldgStdsComEnvelope",[0,.68],124)
-BldgStdsComLighting = (False,"Reduction in E Use Allowed by Component Eff Std[lighting,commercial]","BldgStdsComLighting",[0,.68],125)
-BldgStdsComAppliances = (False,"Reduction in E Use Allowed by Component Eff Std[appliances,commercial]","BldgStdsComAppliances",[0,.68],126)
-BldgStdsComOther = (False,"Reduction in E Use Allowed by Component Eff Std[other component,commercial]","BldgStdsComOther",[0,.68],127)
-ImprovedLabeling = (False,"Boolean Improved Device Labeling","ImprovedLabeling",[0,1],16)
-ContractorEdu = (False,"Boolean Improved Contractor Edu and Training","ContractorEdu",[0,1],17)
-ElecCpntUrbRes = (False,"Percent New Nonelec Component Sales Shifted to Elec[urban residential]","ElecCpntUrbRes",[0,.98],18)
-ElecCpntRurRes = (False,"Percent New Nonelec Component Sales Shifted to Elec[rural residential]","ElecCpntRurRes",[0,.98],114)
-ElecCpntCom = (False,"Percent New Nonelec Component Sales Shifted to Elec[commercial]","ElecCpntCom",[0,.98],115)
-RetrofittingHeating = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[heating]","RetrofittingHeating",[0,.034],19)
-RetrofittingCooling = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[cooling and ventilation]","RetrofittingCooling",[0,.034],20)
-RetrofittingEnvelope = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[envelope]","RetrofittingEnvelope",[0,.034],21)
-RetrofittingLighting = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[lighting]","RetrofittingLighting",[0,.034],22)
-RetrofittingAppliances = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[appliances]","RetrofittingAppliances",[0,.034],23)
-RetrofittingOther = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[other component]","RetrofittingOther",[0,.034],24)
-DistSolarCarveOut = (False,"Min Fraction of Total Elec Demand to be Met by Distributed Solar PV","DistSolarCarveOut",[0,.04],25)
-DistSolarSubsidy = (False,"Perc Subsidy for Distributed Solar PV Capacity","DistSolarSubsidy",[0,.5],26)
+RebateHeating = (False,"Boolean Rebate Program for Efficient Components[heating]","RebateHeating",[0,1],"RebateHeatingGroup")
+RebateCooling = (False,"Boolean Rebate Program for Efficient Components[cooling and ventilation]","RebateCooling",[0,1],"RebateCoolingGroup")
+RebateAppliances = (False,"Boolean Rebate Program for Efficient Components[appliances]","RebateAppliances",[0,1],"RebateAppliancesGroup")
+BldgStdsUrbResHeating = (False,"Reduction in E Use Allowed by Component Eff Std[heating,urban residential]","BldgStdsUrbResHeating",[0,.22],"BldgStdsUrbResHeatingGroup")
+BldgStdsUrbResCooling = (False,"Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,urban residential]","BldgStdsUrbResCooling",[0,.38],"BldgStdsUrbResCoolingGroup")
+BldgStdsUrbResEnvelope = (False,"Reduction in E Use Allowed by Component Eff Std[envelope,urban residential]","BldgStdsUrbResEnvelope",[0,.38],"BldgStdsUrbResEnvelopeGroup")
+BldgStdsUrbResLighting = (False,"Reduction in E Use Allowed by Component Eff Std[lighting,urban residential]","BldgStdsUrbResLighting",[0,.40],"BldgStdsUrbResLightingGroup")
+BldgStdsUrbResAppliances = (False,"Reduction in E Use Allowed by Component Eff Std[appliances,urban residential]","BldgStdsUrbResAppliances",[0,.38],"BldgStdsUrbResAppliancesGroup")
+BldgStdsUrbResOther = (False,"Reduction in E Use Allowed by Component Eff Std[other component,urban residential]","BldgStdsUrbResOther",[0,.11],"BldgStdsUrbResOtherGroup")
+BldgStdsRurResHeating = (False,"Reduction in E Use Allowed by Component Eff Std[heating,rural residential]","BldgStdsRurResHeating",[0,.22],"BldgStdsRurResHeatingGroup")
+BldgStdsRurResCooling = (False,"Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,rural residential]","BldgStdsRurResCooling",[0,.38],"BldgStdsRurResCoolingGroup")
+BldgStdsRurResEnvelope = (False,"Reduction in E Use Allowed by Component Eff Std[envelope,rural residential]","BldgStdsRurResEnvelope",[0,.38],"BldgStdsRurResEnvelopeGroup")
+BldgStdsRurResLighting = (False,"Reduction in E Use Allowed by Component Eff Std[lighting,rural residential]","BldgStdsRurResLighting",[0,.40],"BldgStdsRurResLightingGroup")
+BldgStdsRurResAppliances = (False,"Reduction in E Use Allowed by Component Eff Std[appliances,rural residential]","BldgStdsRurResAppliances",[0,.38],"BldgStdsRurResAppliancesGroup")
+BldgStdsRurResOther = (False,"Reduction in E Use Allowed by Component Eff Std[other component,rural residential]","BldgStdsRurResOther",[0,.11],"BldgStdsRurResOtherGroup")
+BldgStdsComHeating = (False,"Reduction in E Use Allowed by Component Eff Std[heating,commercial]","BldgStdsComHeating",[0,.22],"BldgStdsComHeatingGroup")
+BldgStdsComCooling = (False,"Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,commercial]","BldgStdsComCooling",[0,.38],"BldgStdsComCoolingGroup")
+BldgStdsComEnvelope = (False,"Reduction in E Use Allowed by Component Eff Std[envelope,commercial]","BldgStdsComEnvelope",[0,.38],"BldgStdsComEnvelopeGroup")
+BldgStdsComLighting = (False,"Reduction in E Use Allowed by Component Eff Std[lighting,commercial]","BldgStdsComLighting",[0,.40],"BldgStdsComLightingGroup")
+BldgStdsComAppliances = (False,"Reduction in E Use Allowed by Component Eff Std[appliances,commercial]","BldgStdsComAppliances",[0,.38],"BldgStdsComAppliancesGroup")
+BldgStdsComOther = (False,"Reduction in E Use Allowed by Component Eff Std[other component,commercial]","BldgStdsComOther",[0,.11],"BldgStdsComOtherGroup")
+ImprovedLabeling = (False,"Boolean Improved Device Labeling","ImprovedLabeling",[0,1],"ImprovedLabelingGroup")
+ContractorEdu = (False,"Boolean Improved Contractor Edu and Training","ContractorEdu",[0,1],"ContractorEduGroup")
+ElecCpntUrbRes = (False,"Percent New Nonelec Component Sales Shifted to Elec[urban residential]","ElecCpntUrbRes",[0,1],"ElecCpntUrbResGroup")
+ElecCpntRurRes = (False,"Percent New Nonelec Component Sales Shifted to Elec[rural residential]","ElecCpntRurRes",[0,1],"ElecCpntRurResGroup")
+ElecCpntCom = (False,"Percent New Nonelec Component Sales Shifted to Elec[commercial]","ElecCpntCom",[0,1],"ElecCpntComGroup")
+RetrofittingHeating = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[heating]","RetrofittingHeating",[0,.034],"RetrofittingHeatingGroup")
+RetrofittingCooling = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[cooling and ventilation]","RetrofittingCooling",[0,.034],"RetrofittingCoolingGroup")
+RetrofittingEnvelope = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[envelope]","RetrofittingEnvelope",[0,.034],"RetrofittingEnvelopeGroup")
+RetrofittingLighting = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[lighting]","RetrofittingLighting",[0,.034],"RetrofittingLightingGroup")
+RetrofittingAppliances = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[appliances]","RetrofittingAppliances",[0,.034],"RetrofittingAppliancesGroup")
+RetrofittingOther = (False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[other component]","RetrofittingOther",[0,.034],"RetrofittingOtherGroup")
+DistSolarCarveOut = (False,"Min Fraction of Total Elec Demand to be Met by Distributed Solar PV","DistSolarCarveOut",[0,.24],"DistSolarCarveOutGroup")
+DistSolarSubsidy = (False,"Perc Subsidy for Distributed Solar PV Capacity","DistSolarSubsidy",[0,.5],"DistSolarSubsidyGroup")
 
 # Electricity Supply Sector Policies
-RPS = (False,"Additional Renewable Portfolio Std Percentage","RPS",[0,.25],27)
-DemandResponse = (False,"Fraction of Additional Demand Response Potential Achieved","DemandResponse",[0,1],28)
-SubsidyNuclear = (False,"Subsidy for Elec Production by Fuel[nuclear es]","SubsidyNuclear",[0,35],29)
-SubsidyWind = (False,"Subsidy for Elec Production by Fuel[wind es]","SubsidyWind",[0,35],30)
-SubsidySolarPV = (False,"Subsidy for Elec Production by Fuel[solar PV es]","SubsidySolarPV",[0,35],31)
-SubsidySolarTherm = (False,"Subsidy for Elec Production by Fuel[solar thermal es]","SubsidySolarTherm",[0,35],32)
-SubsidyBiomass = (False,"Subsidy for Elec Production by Fuel[biomass es]","SubsidyBiomass",[0,35],33)
-EarlyRetCoal = (False,"Annual Additional Capacity Retired due to Early Retirement Policy[coal es]","EarlyRetCoal",[0,10000],34)
-EarlyRetNatGas = (False,"Annual Additional Capacity Retired due to Early Retirement Policy[natural gas nonpeaker es]","EarlyRetNatGas",[0,10000],35)
-EarlyRetNuclear = (False,"Annual Additional Capacity Retired due to Early Retirement Policy[nuclear es]","EarlyRetNuclear",[0,10000],36)
-EarlyRetHydro = (False,"Annual Additional Capacity Retired due to Early Retirement Policy[hydro es]","EarlyRetHydro",[0,10000],37)
-LifeExtCoal = (False,"Generation Capacity Lifetime Extension[coal es]","LifeExtCoal",[0,20],38)
-LifeExtNatGas = (False,"Generation Capacity Lifetime Extension[natural gas nonpeaker es]","LifeExtNatGas",[0,20],39)
-LifeExtNuclear = (False,"Generation Capacity Lifetime Extension[nuclear es]","LifeExtNuclear",[0,20],40)
-LifeExtHydro = (False,"Generation Capacity Lifetime Extension[hydro es]","LifeExtHydro",[0,20],41)
-LifeExtWind = (False,"Generation Capacity Lifetime Extension[wind es]","LifeExtWind",[0,20],42)
-LifeExtSolarPV = (False,"Generation Capacity Lifetime Extension[solar PV es]","LifeExtSolarPV",[0,20],43)
-LifeExtSolarTherm = (False,"Generation Capacity Lifetime Extension[solar thermal es]","LifeExtSolarTherm",[0,20],44)
-LifeExtBiomass = (False,"Generation Capacity Lifetime Extension[biomass es]","LifeExtBiomass",[0,20],45)
-MandatedCapConst = (False,"Boolean Use Non BAU Mandated Capacity Construction Schedule","MandatedCapConst",[0,1],46)
-GridStorage = (False,"Additional Non Hydro Storage Annual Growth Percentage","GridStorage",[0,.16],47)
-ContractBasedDispatch = (False,"Boolean Use Contract Based Dispatch in Policy Case","ContractBasedDispatch",[0,1],48)
-TransmissionGrowth = (False,"Percentage Increase in Transmission Capacity vs BAU","TransmissionGrowth",[0,.21],49)
-ReduceTnDLoss = (False,"Percentage TnD Losses Avoided","ReduceTnDLoss",[0,.5],50)
-RedDowntimeNGPreRet = (False,"Percentage Reduction in Plant Downtime[natural gas nonpeaker es,preexisting retiring]","RedDowntimeNGPreRet",[0,.6],53)
-RedDowntimeWindNew = (False,"Percentage Reduction in Plant Downtime[wind es,newly built]","RedDowntimeWindNew",[0,.25],55)
-RedDowntimeSolarPVNew = (False,"Percentage Reduction in Plant Downtime[solar PV es,newly built]","RedDowntimeSolarPVNew",[0,.3],56)
-ChngElecImports = (False,"Percent Change in Electricity Imports","ChngElecImports",[0,1],57)
-ChngElecExports = (False,"Percent Change in Electricity Exports","ChngElecExports",[0,1],58)
+RPS = (False,"Additional Renewable Portfolio Std Percentage","RPS",[0,.88],"RPSGroup")
+DemandResponse = (False,"Fraction of Additional Demand Response Potential Achieved","DemandResponse",[0,1],"DemandResponseGroup")
+SubsidyNuclear = (False,"Subsidy for Elec Production by Fuel[nuclear es]","SubsidyNuclear",[0,60],"SubsidyNuclearGroup")
+SubsidyWind = (False,"Subsidy for Elec Production by Fuel[onshore wind es]","SubsidyWind",[0,60],"SubsidyWindGroup")
+SubsidySolarPV = (False,"Subsidy for Elec Production by Fuel[solar PV es]","SubsidySolarPV",[0,60],"SubsidySolarPVGroup")
+SubsidySolarTherm = (False,"Subsidy for Elec Production by Fuel[solar thermal es]","SubsidySolarTherm",[0,60],"SubsidySolarThermGroup")
+SubsidyBiomass = (False,"Subsidy for Elec Production by Fuel[biomass es]","SubsidyBiomass",[0,60],"SubsidyBiomassGroup")
+EarlyRetCoal = (False,"Annual Additional Capacity Retired due to Early Retirement Policy[hard coal es]","EarlyRetCoal",[0,10000],"EarlyRetCoalGroup")
+EarlyRetNuclear = (False,"Annual Additional Capacity Retired due to Early Retirement Policy[nuclear es]","EarlyRetNuclear",[0,10000],"EarlyRetNuclearGroup")
+LifeExtNuclear = (False,"Nuclear Capacity Lifetime Extension","LifeExtNuclear",[0,20],"LifeExtNuclearGroup")
+GridStorage = (False,"Additional Battery Storage Annual Growth Percentage","GridStorage",[0,.16],"GridStorageGroup")
+TransmissionGrowth = (False,"Percentage Increase in Transmission Capacity vs BAU","TransmissionGrowth",[0,1.13],"TransmissionGrowthGroup")
+ReduceTnDLoss = (False,"Percentage TnD Losses Avoided","ReduceTnDLoss",[0,.4],"ReduceTnDLossGroup")
+RedDowntimeNGPreRet = (False,"Percentage Reduction in Plant Downtime[natural gas nonpeaker es,preexisting retiring]","RedDowntimeNGPreRet",[0,.6],"RedDowntimeNGPreRetGroup")
+RedDowntimeWindNew = (False,"Percentage Reduction in Plant Downtime[onshore wind es,newly built]","RedDowntimeWindNew",[0,.25],"RedDowntimeWindNewGroup")
+RedDowntimeSolarPVNew = (False,"Percentage Reduction in Plant Downtime[solar PV es,newly built]","RedDowntimeSolarPVNew",[0,.3],"RedDowntimeSolarPVNewGroup")
+ChngElecImports = (False,"Percent Change in Electricity Imports","ChngElecImports",[0,1],"ChngElecImportsGroup")
+ChngElecExports = (False,"Percent Change in Electricity Exports","ChngElecExports",[0,1],"ChngElecExportsGroup")
+BanNewCoal = (False,"Boolean Ban New Power Plants[hard coal es]","BanNewCoal",[0,1],"BanNewCoalGroup")
+BanNewNGNonpeaker = (False,"Boolean Ban New Power Plants[natural gas nonpeaker es]","BanNewNGNonpeaker",[0,1],"BanNewNGNonpeakerGroup")
+BanNewNuclear = (False,"Boolean Ban New Power Plants[nuclear es]","BanNewNuclear",[0,1],"BanNewNuclearGroup")
+BanNewHydro = (False,"Boolean Ban New Power Plants[hydro es]","BanNewHydro",[0,1],"BanNewHydroGroup")
 
-# Industrial Sector (Including Agriculture) Policies
-RedNonmethVent = (False,"Fraction of CO2e from Vented Byproduct Gasses Avoided","RedNonmethVent",[0,1],59)
-MethaneDestr = (False,"Fraction of Methane Destruction Opportunities Achieved","MethaneDestr",[0,1],60)
-WorkerTraining = (False,"Fraction of Addressable Process Emissions Avoided via Worker Training","WorkerTraining",[0,1],61)
-ClinkerSubst = (False,"Fraction of Cement Clinker Substitution Made","ClinkerSubst",[0,1],62)
-MethaneCapture = (False,"Fraction of Methane Capture Opportunities Achieved","MethaneCapture",[0,1],63)
-CroplandMgmt = (False,"Fraction of Abatement from Cropland Management Achieved","CroplandMgmt",[0,1],64)
-RiceCultivMeasures = (False,"Fraction of Abatement from Rice Cultivation Measures Achieved","RiceCultivMeasures",[0,1],65)
-LivestockMeasures = (False,"Fraction of Abatement from Livestock Measures Achieved","LivestockMeasures",[0,1],66)
-EarlyRetIndustry = (False,"Fraction of Energy Savings from Early Facility Retirement Achieved","EarlyRetIndustry",[0,1],67)
-ImprSystemDesign = (False,"Fraction of Installation and System Integration Issues Remedied","ImprSystemDesign",[0,1],68)
-CogenWasteHeat = (False,"Fraction of Potential Cogeneration and Waste Heat Recovery Adopted","CogenWasteHeat",[0,1],69)
-IndstSwitchFromCoal = (False,"Fraction of Coal Use Converted to Other Fuels","IndstSwitchFromCoal",[0,.17],70)
-IndstSwitchFromNG = (False,"Fraction of Natural Gas Use Converted to Other Fuels","IndstSwitchFromNG",[0,.2],128)
-IndstEffStdsCement = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other carbonates]","IndstEffStdsCement",[0,.11],71)
-IndstEffStdsNGPS = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[natural gas and petroleum systems]","IndstEffStdsNGPS",[0,.11],72)
-IndstEffStdsIronSteel = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel]","IndstEffStdsIronSteel",[0,.11],73)
-IndstEffStdsChemicals = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals]","IndstEffStdsChemicals",[0,.11],74)
-IndstEffStdsMining = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[mining]","IndstEffStdsMining",[0,.11],75)
-IndstEffStdsWasteMgmt = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[waste management]","IndstEffStdsWasteMgmt",[0,.11],76)
-IndstEffStdsAg = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture]","IndstEffStdsAg",[0,.11],77)
-IndstEffStdsOtherInd = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[other industries]","IndstEffStdsOtherInd",[0,.11],78)
+# Industrial (Non-Agriculture) Sector Policies
+ReduceFGases = (False,"Fraction of F Gases Avoided","ReduceFGases",[0,1],"ReduceFGasesGroup")
+MethaneDestr = (False,"Fraction of Methane Destruction Opportunities Achieved","MethaneDestr",[0,1],"MethaneDestrGroup")
+WorkerTraining = (False,"Fraction of Addressable Process Emissions Avoided via Worker Training","WorkerTraining",[0,1],"WorkerTrainingGroup")
+ClinkerSubst = (False,"Fraction of Cement Clinker Substitution Made","ClinkerSubst",[0,1],"ClinkerSubstGroup")
+MethaneCapture = (False,"Fraction of Methane Capture Opportunities Achieved","MethaneCapture",[0,1],"MethaneCaptureGroup")
+EarlyRetIndustry = (False,"Fraction of Energy Savings from Early Facility Retirement Achieved","EarlyRetIndustry",[0,1],"EarlyRetIndustryGroup")
+ImprSystemDesign = (False,"Fraction of Installation and System Integration Issues Remedied","ImprSystemDesign",[0,1],"ImprSystemDesignGroup")
+CogenWasteHeat = (False,"Fraction of Potential Cogeneration and Waste Heat Recovery Adopted","CogenWasteHeat",[0,1],"CogenWasteHeatGroup")
+IndstSwitchFromCoal = (False,"Fraction of Hard Coal Use Converted to Other Fuels","IndstSwitchFromCoal",[0,.25],"IndstSwitchFromCoalGroup")
+IndstSwitchFromNG = (False,"Fraction of Natural Gas Use Converted to Other Fuels","IndstSwitchFromNG",[0,.25],"IndstSwitchFromNGGroup")
+IndstEffStdsCement = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other carbonates]","IndstEffStdsCement",[0,.08],"IndstEffStdsCementGroup")
+IndstEffStdsNGPS = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[natural gas and petroleum systems]","IndstEffStdsNGPS",[0,.08],"IndstEffStdsNGPSGroup")
+IndstEffStdsIronSteel = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel]","IndstEffStdsIronSteel",[0,.08],"IndstEffStdsIronSteelGroup")
+IndstEffStdsChemicals = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals]","IndstEffStdsChemicals",[0,.08],"IndstEffStdsChemicalsGroup")
+IndstEffStdsMining = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[mining]","IndstEffStdsMining",[0,.08],"IndstEffStdsMiningGroup")
+IndstEffStdsWasteMgmt = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[waste management]","IndstEffStdsWasteMgmt",[0,.08],"IndstEffStdsWasteMgmtGroup")
+IndstEffStdsAg = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture]","IndstEffStdsAg",[0,.08],"IndstEffStdsAgGroup")
+IndstEffStdsOtherInd = (False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[other industries]","IndstEffStdsOtherInd",[0,.08],"IndstEffStdsOtherIndGroup")
 
-# Land Use and Forestry Policies
-SetAsides = (False,"Fraction of Abatement from Forest Set Asides Achieved","SetAsides",[0,.31],79)
-AfforestAndReforest = (False,"Fraction of Abatement from Afforestation and Reforestation Achieved","AfforestAndReforest",[0,.45],80)
-ImprForestMgmt = (False,"Fraction of Abatement from Improved Forest Management Achieved","ImprForestMgmt",[0,1],81)
-AvoidDeforest = (False,"Fraction of Abatement from Avoided Deforestation Achieved","AvoidDeforest",[0,1],82)
+# Agriculture, Land Use, and Forestry Policies
+CroplandMgmt = (False,"Fraction of Abatement from Cropland Management Achieved","CroplandMgmt",[0,1],"CroplandMgmtGroup")
+RiceCultivMeasures = (False,"Fraction of Abatement from Rice Cultivation Measures Achieved","RiceCultivMeasures",[0,1],"RiceCultivMeasuresGroup")
+LivestockMeasures = (False,"Fraction of Abatement from Livestock Measures Achieved","LivestockMeasures",[0,1],"LivestockMeasuresGroup")
+SetAsides = (False,"Fraction of Forest Set Asides Achieved","SetAsides",[0,1],"SetAsidesGroup")
+AfforestAndReforest = (False,"Fraction of Afforestation and Reforestation Achieved","AfforestAndReforest",[0,1],"AfforestAndReforestGroup")
+ImprForestMgmt = (False,"Fraction of Improved Forest Management Achieved","ImprForestMgmt",[0,1],"ImprForestMgmtGroup")
+
+# District Heat Policies
+ConvertNonCHPHeat = (False,"Fraction of Non CHP Heat Production Converted to CHP","ConvertNonCHPHeat",[0,1],"ConvertNonCHPHeatGroup")
+HeatSwitchFromCoal = (False,"Fraction of District Heat Hard Coal Use Converted to Other Fuels","HeatSwitchFromCoal",[0,1],"HeatSwitchFromCoalGroup")
 
 # Cross-Sector Policies
-CarbonTax = (False,"Carbon Tax","CarbonTax",[0,100],83)
-CCSGrowth = (False,"Fraction of Potential Additional CCS Achieved","CCSGrowth",[0,1],84)
-NonMarketElecPrice = (False,"Boolean Prevent Policies from Affecting Electricity Prices","NonMarketElecPrice",[0,1],85)
-ConvertNonCHPHeat = (False,"Fraction of Non CHP Heat Production Converted to CHP","ConvertNonCHPHeat",[0,1],86)
-FuelTaxElec = (False,"Additional Fuel Tax Rate by Fuel[electricity]","FuelTaxElec",[0,.2],87)
-FuelTaxCoal = (False,"Additional Fuel Tax Rate by Fuel[coal]","FuelTaxCoal",[0,.2],88)
-FuelTaxNatGas = (False,"Additional Fuel Tax Rate by Fuel[natural gas]","FuelTaxNatGas",[0,.2],89)
-FuelTaxNuclear = (False,"Additional Fuel Tax Rate by Fuel[nuclear]","FuelTaxNuclear",[0,.2],90)
-FuelTaxBiomass = (False,"Additional Fuel Tax Rate by Fuel[biomass]","FuelTaxBiomass",[0,.2],91)
-FuelTaxPetGas = (False,"Additional Fuel Tax Rate by Fuel[petroleum gasoline]","FuelTaxPetGas",[0,.2],92)
-FuelTaxPetDies = (False,"Additional Fuel Tax Rate by Fuel[petroleum diesel]","FuelTaxPetDies",[0,.2],93)
-FuelTaxBioGas = (False,"Additional Fuel Tax Rate by Fuel[biofuel gasoline]","FuelTaxBioGas",[0,.2],94)
-FuelTaxBioDies = (False,"Additional Fuel Tax Rate by Fuel[biofuel diesel]","FuelTaxBioDies",[0,.2],95)
-FuelTaxJetFuel = (False,"Additional Fuel Tax Rate by Fuel[jet fuel]","FuelTaxJetFuel",[0,.2],96)
-FuelTaxHeat = (False,"Additional Fuel Tax Rate by Fuel[heat]","FuelTaxHeat",[0,.2],97)
-RmvBAUSubsidiesElec = (False,"Percent Reduction in BAU Subsidies[electricity]","RmvBAUSubsidiesElec",[0,1],98)
-RmvBAUSubsidiesCoal = (False,"Percent Reduction in BAU Subsidies[coal]","RmvBAUSubsidiesCoal",[0,1],99)
-RmvBAUSubsidiesNatGas = (False,"Percent Reduction in BAU Subsidies[natural gas]","RmvBAUSubsidiesNatGas",[0,1],100)
-RmvBAUSubsidiesNucl = (False,"Percent Reduction in BAU Subsidies[nuclear]","RmvBAUSubsidiesNucl",[0,1],101)
-RmvBAUSubsidiesHydro = (False,"Percent Reduction in BAU Subsidies[hydro]","RmvBAUSubsidiesHydro",[0,1],102)
-RmvBAUSubsidiesWind = (False,"Percent Reduction in BAU Subsidies[wind]","RmvBAUSubsidiesWind",[0,1],103)
-RmvBAUSubsidiesSolar = (False,"Percent Reduction in BAU Subsidies[solar]","RmvBAUSubsidiesSolar",[0,1],104)
-RmvBAUSubsidiesBiom = (False,"Percent Reduction in BAU Subsidies[biomass]","RmvBAUSubsidiesBiom",[0,1],105)
-RmvBAUSubsidiesPetGas = (False,"Percent Reduction in BAU Subsidies[petroleum gasoline]","RmvBAUSubsidiesPetGas",[0,1],106)
-RmvBAUSubsidiesPetDies = (False,"Percent Reduction in BAU Subsidies[petroleum diesel]","RmvBAUSubsidiesPetDies",[0,1],107)
-RmvBAUSubsidiesBioGas = (False,"Percent Reduction in BAU Subsidies[biofuel gasoline]","RmvBAUSubsidiesBioGas",[0,1],108)
-RmvBAUSubsidiesBioDies = (False,"Percent Reduction in BAU Subsidies[biofuel diesel]","RmvBAUSubsidiesBioDies",[0,1],109)
-RmvBAUSubsidiesJetFuel = (False,"Percent Reduction in BAU Subsidies[jet fuel]","RmvBAUSubsidiesJetFuel",[0,1],110)
-RmvBAUSubsidiesHeat = (False,"Percent Reduction in BAU Subsidies[heat]","RmvBAUSubsidiesHeat",[0,1],111)
+CarbonTaxTrans = (False,"Carbon Tax[transportation sector]","CarbonTaxTrans",[0,300],"CarbonTaxTransGroup")
+CarbonTaxElec = (False,"Carbon Tax[electricity sector]","CarbonTaxElec",[0,300],"CarbonTaxElecGroup")
+CarbonTaxResBldg = (False,"Carbon Tax[residential buildings sector]","CarbonTaxResBldg",[0,300],"CarbonTaxResBldgGroup")
+CarbonTaxComBldg = (False,"Carbon Tax[commercial buildings sector]","CarbonTaxComBldg",[0,300],"CarbonTaxComBldgGroup")
+CarbonTaxIndst = (False,"Carbon Tax[industry sector]","CarbonTaxIndst",[0,300],"CarbonTaxIndstGroup")
+CCSGrowth = (False,"Fraction of Potential Additional CCS Achieved","CCSGrowth",[0,1],"CCSGrowthGroup")
+FuelTaxElec = (False,"Additional Fuel Tax Rate by Fuel[electricity]","FuelTaxElec",[0,.2],"FuelTaxElecGroup")
+FuelTaxCoal = (False,"Additional Fuel Tax Rate by Fuel[hard coal]","FuelTaxCoal",[0,.2],"FuelTaxCoalGroup")
+FuelTaxNatGas = (False,"Additional Fuel Tax Rate by Fuel[natural gas]","FuelTaxNatGas",[0,.2],"FuelTaxNatGasGroup")
+FuelTaxPetGas = (False,"Additional Fuel Tax Rate by Fuel[petroleum gasoline]","FuelTaxPetGas",[0,.2],"FuelTaxPetGasGroup")
+FuelTaxPetDies = (False,"Additional Fuel Tax Rate by Fuel[petroleum diesel]","FuelTaxPetDies",[0,.2],"FuelTaxPetDiesGroup")
+RmvBAUSubsidiesCoal = (False,"Percent Reduction in BAU Subsidies[hard coal]","RmvBAUSubsidiesCoal",[0,1],"RmvBAUSubsidiesCoalGroup")
+RmvBAUSubsidiesNatGas = (False,"Percent Reduction in BAU Subsidies[natural gas]","RmvBAUSubsidiesNatGas",[0,1],"RmvBAUSubsidiesNatGasGroup")
+RmvBAUSubsidiesNucl = (False,"Percent Reduction in BAU Subsidies[nuclear]","RmvBAUSubsidiesNucl",[0,1],"RmvBAUSubsidiesNuclGroup")
+RmvBAUSubsidiesSolar = (False,"Percent Reduction in BAU Subsidies[solar]","RmvBAUSubsidiesSolar",[0,1],"RmvBAUSubsidiesSolarGroup")
+RmvBAUSubsidiesPetGas = (False,"Percent Reduction in BAU Subsidies[petroleum gasoline]","RmvBAUSubsidiesPetGas",[0,1],"RmvBAUSubsidiesPetGasGroup")
+RmvBAUSubsidiesPetDies = (False,"Percent Reduction in BAU Subsidies[petroleum diesel]","RmvBAUSubsidiesPetDies",[0,1],"RmvBAUSubsidiesPetDiesGroup")
 
 # Building the Policy List
 # ------------------------
 # Every policy, whether enabled or not, appears on a list below called "PotentialPolicies".
 # Now we construct the actual list of policies to be included (named "Policies") by
 # checking which of the policies have been enabled.
-PotentialPolicies = (ElecPsgrLDVs, ElecPsgrHDVs, Feebate, FuelEconLDVs, FuelEconHDVs, TDM, RebateHeating, RebateCooling, RebateAppliances, BldgStdsUrbResHeating, BldgStdsUrbResCooling, BldgStdsUrbResEnvelope, BldgStdsUrbResLighting, BldgStdsUrbResAppliances, BldgStdsUrbResOther, BldgStdsRurResHeating, BldgStdsRurResCooling, BldgStdsRurResEnvelope, BldgStdsRurResLighting, BldgStdsRurResAppliances, BldgStdsRurResOther, BldgStdsComHeating, BldgStdsComCooling, BldgStdsComEnvelope, BldgStdsComLighting, BldgStdsComAppliances, BldgStdsComOther, ImprovedLabeling, ContractorEdu, ElecCpntUrbRes, ElecCpntRurRes, ElecCpntCom, RetrofittingHeating, RetrofittingCooling, RetrofittingEnvelope, RetrofittingLighting, RetrofittingAppliances, RetrofittingOther, DistSolarCarveOut, DistSolarSubsidy, RPS, DemandResponse, SubsidyNuclear, SubsidyWind, SubsidySolarPV, SubsidySolarTherm, SubsidyBiomass, EarlyRetCoal, EarlyRetNatGas, EarlyRetNuclear, EarlyRetHydro, LifeExtCoal, LifeExtNatGas, LifeExtNuclear, LifeExtHydro, LifeExtWind, LifeExtSolarPV, LifeExtSolarTherm, LifeExtBiomass, MandatedCapConst, GridStorage, ContractBasedDispatch, TransmissionGrowth, ReduceTnDLoss, RedDowntimeNGPreRet, RedDowntimeWindNew, RedDowntimeSolarPVNew, ChngElecImports, ChngElecExports, RedNonmethVent, MethaneDestr, WorkerTraining, ClinkerSubst, MethaneCapture, CroplandMgmt, RiceCultivMeasures, LivestockMeasures, EarlyRetIndustry, ImprSystemDesign, CogenWasteHeat, IndstSwitchFromCoal, IndstSwitchFromNG, IndstEffStdsCement, IndstEffStdsNGPS, IndstEffStdsIronSteel, IndstEffStdsChemicals, IndstEffStdsMining, IndstEffStdsWasteMgmt, IndstEffStdsAg, IndstEffStdsOtherInd, SetAsides, AfforestAndReforest, ImprForestMgmt, AvoidDeforest, CarbonTax, CCSGrowth, NonMarketElecPrice, ConvertNonCHPHeat, FuelTaxElec, FuelTaxCoal, FuelTaxNatGas, FuelTaxNuclear, FuelTaxBiomass, FuelTaxPetGas, FuelTaxPetDies, FuelTaxBioGas, FuelTaxBioDies, FuelTaxJetFuel, FuelTaxHeat, RmvBAUSubsidiesElec, RmvBAUSubsidiesCoal, RmvBAUSubsidiesNatGas, RmvBAUSubsidiesNucl, RmvBAUSubsidiesHydro, RmvBAUSubsidiesWind, RmvBAUSubsidiesSolar, RmvBAUSubsidiesBiom, RmvBAUSubsidiesPetGas, RmvBAUSubsidiesPetDies, RmvBAUSubsidiesBioGas, RmvBAUSubsidiesBioDies, RmvBAUSubsidiesJetFuel, RmvBAUSubsidiesHeat)
+PotentialPolicies = (Feebate, FuelEconLDVs, FuelEconHDVs, FuelEconAircraft, FuelEconRail, FuelEconShips, FuelEconMtrbks, PsgrTDM, FrgtTDM, LCFS, RebateHeating, RebateCooling, RebateAppliances, BldgStdsUrbResHeating, BldgStdsUrbResCooling, BldgStdsUrbResEnvelope, BldgStdsUrbResLighting, BldgStdsUrbResAppliances, BldgStdsUrbResOther, BldgStdsRurResHeating, BldgStdsRurResCooling, BldgStdsRurResEnvelope, BldgStdsRurResLighting, BldgStdsRurResAppliances, BldgStdsRurResOther, BldgStdsComHeating, BldgStdsComCooling, BldgStdsComEnvelope, BldgStdsComLighting, BldgStdsComAppliances, BldgStdsComOther, ImprovedLabeling, ContractorEdu, ElecCpntUrbRes, ElecCpntRurRes, ElecCpntCom, RetrofittingHeating, RetrofittingCooling, RetrofittingEnvelope, RetrofittingLighting, RetrofittingAppliances, RetrofittingOther, DistSolarCarveOut, DistSolarSubsidy, RPS, DemandResponse, SubsidyNuclear, SubsidyWind, SubsidySolarPV, SubsidySolarTherm, SubsidyBiomass, EarlyRetCoal, EarlyRetNuclear, LifeExtNuclear, GridStorage, TransmissionGrowth, ReduceTnDLoss, RedDowntimeNGPreRet, RedDowntimeWindNew, RedDowntimeSolarPVNew, ChngElecImports, ChngElecExports, BanNewCoal, BanNewNGNonpeaker, BanNewNuclear, BanNewHydro, ReduceFGases, MethaneDestr, WorkerTraining, ClinkerSubst, MethaneCapture, EarlyRetIndustry, ImprSystemDesign, CogenWasteHeat, IndstSwitchFromCoal, IndstSwitchFromNG, IndstEffStdsCement, IndstEffStdsNGPS, IndstEffStdsIronSteel, IndstEffStdsChemicals, IndstEffStdsMining, IndstEffStdsWasteMgmt, IndstEffStdsAg, IndstEffStdsOtherInd, CroplandMgmt, RiceCultivMeasures, LivestockMeasures, SetAsides, AfforestAndReforest, ImprForestMgmt, ConvertNonCHPHeat, HeatSwitchFromCoal, CarbonTaxTrans, CarbonTaxElec, CarbonTaxResBldg, CarbonTaxComBldg, CarbonTaxIndst, CCSGrowth, FuelTaxElec, FuelTaxCoal, FuelTaxNatGas, FuelTaxPetGas, FuelTaxPetDies, RmvBAUSubsidiesCoal, RmvBAUSubsidiesNatGas, RmvBAUSubsidiesNucl, RmvBAUSubsidiesSolar, RmvBAUSubsidiesPetGas, RmvBAUSubsidiesPetDies)
 Policies = []
 for PotentialPolicy in PotentialPolicies:
 	if PotentialPolicy[Enabled]:
@@ -273,7 +262,13 @@ def PerformRunsWithEnabledGroups():
 		f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|+!||||:")
 		f.write("\tEnabledPolicyGroup=" + str(EnabledGroup))
 		f.write("\tEnabledPolicies=" + EnabledPolicies + "\n\n")
-
+	
+	# Finally, we do a run with all of the policy groups enabled (a full policy case run)
+	f.write("MENU>RUN|O\n")
+	f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|+!||||:")
+	f.write("\tEnabledPolicyGroup=All")
+	f.write("\tEnabledPolicies=All\n\n")
+	
 def PerformRunsWithDisabledGroups():
 
 	# First, we do a run with all of the groups enabled
@@ -304,7 +299,13 @@ def PerformRunsWithDisabledGroups():
 		f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|+!||||:")
 		f.write("\tDisabledPolicyGroup=" + str(DisabledGroup))
 		f.write("\tDisabledPolicies=" + DisabledPolicies + "\n\n")
-
+	
+	# Finally, we do a run with all of the groups disabled (a BAU case run)
+	f.write("MENU>RUN|O\n")
+	f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|+!||||:")
+	f.write("\tDisabledPolicyGroup=All")
+	f.write("\tDisabledPolicies=All\n\n")
+	
 if EnableOrDisableGroups == "Enable":
 	PerformRunsWithEnabledGroups()
 else:

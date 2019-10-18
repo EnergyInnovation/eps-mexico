@@ -1,12 +1,14 @@
-,Fixed O&M ($/MW)
-coal,38959
-natural gas nonpeaker,19525
-nuclear,94340
-hydro,61450
-wind,29840
-solar PV,21000
-solar thermal,288000
-biomass,44749
-petroleum,38735
-geothermal,100744
-natural gas peaker,14841
+Fixed O&M ($/MW),preexisting retiring,preexisting nonretiring,newly built
+hard coal,31572,0,73761
+natural gas nonpeaker,17714,0,20676
+nuclear,94478,0,94478
+hydro,22802,0,22802
+onshore wind,35625,0,35625
+solar PV,9975,0,9975
+solar thermal,45381,0,45381
+biomass,105580,0,105580
+geothermal,98197,0,98197
+petroleum,33496,0,32127
+natural gas peaker,4750,0,4556
+lignite,29993,0,70073
+offshore wind,73960,0,73960

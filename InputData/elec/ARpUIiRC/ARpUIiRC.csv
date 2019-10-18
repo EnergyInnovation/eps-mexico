@@ -1,12 +1,14 @@
 ,Annual Retirement per Unit Increase in Relative Cost MW/($/MWh)
-coal,385
-natural gas nonpeaker,385
-nuclear,0
-hydro,0
-wind,0
-solar PV,0
-solar thermal,0
-biomass,385
-geothermal,0
-petroleum,0
+hard coal,210
+natural gas nonpeaker,170
+nuclear,84
+hydro,36
+onshore wind,41
+solar PV,21
+solar thermal,90
+biomass,345
+geothermal,56
+petroleum,852
 natural gas peaker,0
+lignite,108
+offshore wind,74
