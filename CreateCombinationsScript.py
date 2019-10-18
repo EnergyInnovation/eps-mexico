@@ -1,4 +1,4 @@
-# CreatePermutationsScript.py
+# CreateCombinationsScript.py
 #
 # Developed by Jeffrey Rissman
 #
@@ -15,7 +15,7 @@
 # Rather than including input and output file names in the code below, we assign all the file
 # names to variables in this section.  This allows the names to be easily changed if desired.
 ModelFile = "EPS.mdl" # The name of the Vensim model file (typically with .mdl or .vpm extension)
-OutputScript = "GeneratedPermutationsScript.cmd" # The desired filename of the Vensim command script to be generated
+OutputScript = "GeneratedCombinationsScript.cmd" # The desired filename of the Vensim command script to be generated
 RunResultsFile = "RunResults.tsv" # The desired filename for TSV file containing model run results
 OutputVarsFile = "OutputVarsToExport.lst" # The name of the file containing a list of variables to be included in the RunResultsFile
                                           # May optionally also be used as a SAVELIST for Vensim (see below)
@@ -28,7 +28,8 @@ MinPolicyCols = 0 # At least this many columns for policy settings will be added
 				  # fewer policies than this, the extra columns will be blank.  The purpose of this setting is to make it
 				  # easier to append various RunResultsFiles together, when they use different numbers of enabled policies,
 				  # and still have the columns line up correctly.
-
+PolicySchedule = 1 # The number of the policy implementation schedule file to be used (in InputData/plcy-schd/FoPITY)
+				  
 
 # Index definitions
 # -----------------
@@ -61,13 +62,13 @@ Settings = 3
 Feebate = (False,"LDVs Feebate Rate","Feebate",[0,1])
 FuelEconLDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,LDVs]","FuelEconLDVs",[0,1])
 FuelEconHDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[diesel vehicle,HDVs]","FuelEconHDVs",[0,.66])
-FuelEconAircraft = (True,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,aircraft]","FuelEconAircraft",[0,.54])
-FuelEconRail = (True,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,rail]","FuelEconRail",[0,.2])
-FuelEconShips = (True,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,ships]","FuelEconShips",[0,.2])
-FuelEconMtrbks = (True,"Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,motorbikes]","FuelEconMtrbks",[0,.74])
+FuelEconAircraft = (False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,aircraft]","FuelEconAircraft",[0,.54])
+FuelEconRail = (False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,rail]","FuelEconRail",[0,.2])
+FuelEconShips = (False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,ships]","FuelEconShips",[0,.2])
+FuelEconMtrbks = (False,"Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,motorbikes]","FuelEconMtrbks",[0,.74])
 PsgrTDM = (False,"Fraction of TDM Package Implemented[passenger]","PsgrTDM",[0,1])
 FrgtTDM = (False,"Fraction of TDM Package Implemented[freight]","FrgtTDM",[0,1])
-LCFS = (True,"Additional LCFS Percentage","LCFS",[0,.2])
+LCFS = (False,"Additional LCFS Percentage","LCFS",[0,.2])
 
 # Buildings and Appliances Sector Policies
 RebateHeating = (False,"Boolean Rebate Program for Efficient Components[heating]","RebateHeating",[0,1])
@@ -300,6 +301,9 @@ for PolicySettingCombination in PolicySettingCombinations:
 	
 	for ActivePolicy in range(len(Policies)):	
 		f.write("SIMULATE>SETVAL|" + Policies[ActivePolicy][LongName] + "=" + str(Policies[ActivePolicy][Settings][PolicySettingCombination[ActivePolicy]]) + "\n")
+	
+	# We include a SETVAL instruction to select the correct policy implementation schedule file
+	f.write("SIMULATE>SETVAL|Policy Implementation Schedule Selector=" + str(PolicySchedule) + "\n")
 	
 	# We add a RUN instruction now that we've added all the SETVAL instructions.
 	f.write("MENU>RUN|O\n")

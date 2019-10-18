@@ -1,7 +1,7 @@
-Vehicle type,government,public,private
-LDVs,0.002025397,0.020900724,0.977073879
-HDVs,0.00567294,0.434895285,0.559431776
-aircraft,0,0,1
-rail,0,0,1
-ships,0,0,1
-motorbikes,0.005516801,0.00469124,0.989791959
+﻿Vehicle type,government,industry,consumers
+LDVs,0.0020,0.0209,0.9771
+HDVs,0.0057,0.4349,0.5594
+aircraft,0.0000,1.0000,0.0000
+rail,1.0000,0.0000,0.0000
+ships,0.0000,1.0000,0.0000
+motorbikes,0.0055,0.0047,0.9898
