@@ -18,5 +18,5 @@ Documentation of the model is available [here](https://us.energypolicy.solutions
 ## Other Information
 
 * [Acknowledgement of Contributors to Mexico Adaptation](acknowledgement.html)
-* [Software License Information](software-license.html)
+* [Software License and Image Credits](software-license.html)
 * [Prior Mexico Model Release](prior-release.html)
