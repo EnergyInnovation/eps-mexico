@@ -1,9 +1,9 @@
 Fuel Economy (passenger*miles/BTU),battery electric vehicle,natural gas vehicle,gasoline vehicle,diesel vehicle,plugin hybrid vehicle,LPG vehicle,hydrogen vehicle
 LDVs,1.093E-03,2.740E-04,3.503E-04,2.462E-04,5.655E-04,2.317E-04,4.924E-04
 HDVs,3.545E-03,0.000E+00,1.018E-03,1.103E-03,2.446E-03,0.000E+00,3.309E-03
-aircraft,6.290E-05,1.957E-05,1.957E-05,1.957E-05,0,0,5.872E-05
+aircraft,1.419E-03,4.414E-04,4.414E-04,4.414E-04,0,0,1.324E-03
 rail,1.241E-03,4.244E-04,4.244E-04,4.244E-04,0,0,1.273E-03
-ships,0.000E+00,0.000E+00,0.000E+00,0.000E+00,0,0,0.000E+00
+ships,3.229E-05,0.000E+00,1.005E-05,1.005E-05,0,0,3.015E-05
 motorbikes,1.334E-03,4.191E-04,4.191E-04,4.191E-04,9.225E-04,3.248E-04,1.257E-03
 ,,,,,,,
 ,,,,,,,
