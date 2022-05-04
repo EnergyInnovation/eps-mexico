@@ -19068,24 +19068,27 @@ Minimum Required Sales Perc by Technology Type[Vehicle Type,Cargo Type,hydrogen 
 	~		|
 
 MOfEDS Manual Override for Electricity Dispatch Shareweights[Electricity Source,preexisting retiring\
-		]=
-	GET DIRECT CONSTANTS(
+		]:=
+	GET DIRECT DATA(
 	   'InputData/elec/MOfEDS/MOfEDS-preexisting-retiring.csv',
 	   ',',
+	   '1',
 	   'B2'
 	) ~~|
 MOfEDS Manual Override for Electricity Dispatch Shareweights[Electricity Source,preexisting nonretiring\
-		]=
-	GET DIRECT CONSTANTS(
+		]:=
+	GET DIRECT DATA(
 	   'InputData/elec/MOfEDS/MOfEDS-preexisting-nonretiring.csv',
 	   ',',
+	   '1',
 	   'B2'
 	) ~~|
 MOfEDS Manual Override for Electricity Dispatch Shareweights[Electricity Source,newly built\
-		]=
-	GET DIRECT CONSTANTS(
+		]:=
+	GET DIRECT DATA(
 	   'InputData/elec/MOfEDS/MOfEDS-newly-built.csv',
 	   ',',
+	   '1',
 	   'B2'
 	)
 	~	Dmnl
@@ -40430,6 +40433,7 @@ Revenue changes for fuel-supplying cash flow entities should be the same after a
 6:asian
 6:Asthma exacerbation
 6:battery electric vehicle
+6:BC
 6:biofuel diesel
 6:biofuel diesel tf
 6:biofuel gasoline
@@ -40502,12 +40506,14 @@ Revenue changes for fuel-supplying cash flow entities should be the same after a
 6:Cardiovascular hospital admissions
 6:cement and other nonmetallic minerals 239
 6:cement industry measures
+6:CH4
 6:chemicals 20
 6:chemicals f gas destruction
 6:chemicals f gas recovery
 6:chemicals f gas substitution
 6:chemicals inspct maint retrofit
 6:chemicals N2O abatement
+6:CO
 6:CO2
 6:coal gasification
 6:coal mining 05
@@ -40894,6 +40900,7 @@ Revenue changes for fuel-supplying cash flow entities should be the same after a
 6:envelope
 6:EV subsidy
 6:exports
+6:F gases
 6:female
 6:food beverage and tobacco 10T12
 6:foreign entities
@@ -41763,6 +41770,7 @@ Revenue changes for fuel-supplying cash flow entities should be the same after a
 6:motorbikes
 6:municipal solid waste
 6:municipal solid waste es
+6:N2O
 6:national debt interest
 6:natural gas
 6:natural gas and petroleum suppliers
@@ -41783,8 +41791,10 @@ Revenue changes for fuel-supplying cash flow entities should be the same after a
 6:nonhispanic
 6:nonroad vehicles 30
 6:nonunion
+6:NOx
 6:nuclear
 6:nuclear es
+6:OC
 6:offshore wind es
 6:oil and gas extraction 06
 6:one hundred years
@@ -41806,6 +41816,8 @@ Revenue changes for fuel-supplying cash flow entities should be the same after a
 6:petroleum gasoline
 6:petroleum gasoline tf
 6:plugin hybrid vehicle
+6:PM10
+6:PM25
 6:preexisting nonretiring
 6:preexisting retiring
 6:Premature mortality
@@ -42037,6 +42049,7 @@ Revenue changes for fuel-supplying cash flow entities should be the same after a
 6:solar
 6:solar PV es
 6:solar thermal es
+6:SOx
 6:standard compliant
 6:summer
 6:textiles apparel and leather 13T15
@@ -42192,6 +42205,7 @@ Revenue changes for fuel-supplying cash flow entities should be the same after a
 6:union
 6:Upper respiratory symptoms
 6:urban residential
+6:VOC
 6:waste management methane capture
 6:waste management methane destruction
 6:water and waste 36T39
