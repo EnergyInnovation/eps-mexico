@@ -3,11 +3,13 @@ layout: page
 title: "Prior Mexico Model Release"
 ---
 
-The current version of the Mexico EPS is the second release of this tool.  In 2016, an earlier version (1.1.4) of the Mexico EPS was released.  This page allows you to download that model and access materials related to that release.
+The current version of the Mexico EPS is the third release of this tool.  In 2016, an earlier version (1.1.4) of the Mexico EPS was released.  This page allows you to download that model and access materials related to that release.
 
 ### Prior Version Download
 
-The old (1.1.4) version of the Mexico EPS is [available here](https://us.energypolicy.solutions/eps-archive/eps-1.1.4-mexico.zip).
+The old (1.4.2) version of the Mexico EPS is [available here](https://us.energypolicy.solutions/eps-archive/eps-1.4.2-mexico.zip)
+
+The older (1.1.4) version of the Mexico EPS is [available here](https://us.energypolicy.solutions/eps-archive/eps-1.1.4-mexico.zip).
 
 ### Prior Version Results
 
