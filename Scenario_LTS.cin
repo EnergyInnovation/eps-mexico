@@ -52,8 +52,6 @@ Fraction of Industrial Fuel Use Shifted to Other Fuels[iron and steel 241,electr
 Fraction of Industrial Fuel Use Shifted to Other Fuels[iron and steel 241,hydrogen if] = 0.43
 Fraction of Industrial Fuel Use Shifted to Other Fuels[other metals 242,electricity if] = 0.26
 Fraction of Industrial Fuel Use Shifted to Other Fuels[other metals 242,hydrogen if] = 0.34
-Fraction of Industrial Fuel Use Shifted to Other Fuels[other machinery 28,electricity if] = 0.56
-Fraction of Industrial Fuel Use Shifted to Other Fuels[other machinery 28,hydrogen if] = 0.04
 Fraction of Industrial Fuel Use Shifted to Other Fuels[road vehicles 29,electricity if] = 0.56
 Fraction of Industrial Fuel Use Shifted to Other Fuels[road vehicles 29,hydrogen if] = 0.04
 Fraction of Industrial Fuel Use Shifted to Other Fuels[other manufacturing 31T33,electricity if] = 0.55
