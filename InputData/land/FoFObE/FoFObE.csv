@@ -1,4 +1,5 @@
 ,Fraction of Forest Owned
 government,0.366
-industry,0.162
-consumers,0.472
+domestic industries,0.162
+labor and consumers,0.472
+foreign entities,0
