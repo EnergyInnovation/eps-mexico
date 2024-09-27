@@ -1,0 +1,326 @@
+{UTF-8}
+CPL 100Percent = 100
+	~	Percentage
+	~	Constant to have for Percentage units
+	|
+
+CPL Average Rooftop PV Capacity = 2
+	~	kW/rooftop
+	~	Assumed capacity of the average rooftop solar array.
+	|
+
+"CPL BAU Total CO2e Emission (mmt)" = BAU Total CO2e Emissions / Grams per Million Metric Tons CO2e
+             
+	~	million metric tons
+	~		|
+
+CPL Carbon Tax Rate 2019[Sectors] = Carbon Tax Rate[Sectors] / OCCF Dollars per Small Output Currency Unit
+             
+	~	output currency unit/metric ton CO2e
+	~		~	:SUPPLEMENTARY 
+	|
+
+"CPL CH4 Emission Reduction 2030 (below 2020)" = 100 * ( ( CPL CH4 Emissisions in 2030
+             - CPL CH4 Emissions in 2020 ) / CPL CH4 Emissions in 2020 ) 
+	~	Dmnl
+	~		~	:SUPPLEMENTARY 
+	|
+
+CPL CH4 Emissions in 2020 = SAMPLE IF TRUE( Time = 2020, Output Total CH4 Emissions , 
+             -1) 
+	~	million metric tons
+	~		|
+
+CPL CH4 Emissisions in 2030 = SAMPLE IF TRUE( Time = 2030, Output Total CH4 Emissions
+             , -1) 
+	~	million metric tons
+	~		|
+
+CPL Coal Generation in 2030 = SAMPLE IF TRUE( Time = 2030, CPL Electricity Generation Capacity[
+             hard coal es] , -1) 
+	~	GW
+	~		~	:SUPPLEMENTARY 
+	|
+
+CPL Distribute Solar PV Capacity in 2030 = SAMPLE IF TRUE( Time = 2030, Output Distributed Solar PV Capacity
+             , -1) 
+	~	GW
+	~		|
+
+CPL Electricity Generation Capacity[hard coal es] = Output Electricity Generation Capacity[
+        hard coal es] + Output Electricity Generation Capacity[lignite es]  ~~|
+CPL Electricity Generation Capacity[solar PV es] = Output Electricity Generation Capacity[
+        solar PV es] + Output Electricity Generation Capacity[solar thermal es]  ~~|
+CPL Electricity Generation Capacity[natural gas nonpeaker es] = Output Electricity Generation Capacity[
+        natural gas nonpeaker es] + Output Electricity Generation Capacity[natural gas peaker es
+             ]  ~~|
+CPL Electricity Generation Capacity[onshore wind es] = Output Electricity Generation Capacity[
+        onshore wind es] + Output Electricity Generation Capacity[offshore wind es]  ~~|
+CPL Electricity Generation Capacity[petroleum es] = Output Electricity Generation Capacity[
+        petroleum es] + Output Electricity Generation Capacity[crude oil es] + Output Electricity Generation Capacity[
+             heavy or residual fuel oil es]  ~~|
+CPL Electricity Generation Capacity[nuclear es] = Output Electricity Generation Capacity[
+        nuclear es]  ~~|
+CPL Electricity Generation Capacity[hydro es] = Output Electricity Generation Capacity[
+        hydro es]  ~~|
+CPL Electricity Generation Capacity[biomass es] = Output Electricity Generation Capacity[
+        biomass es]  ~~|
+CPL Electricity Generation Capacity[geothermal es] = Output Electricity Generation Capacity[
+        geothermal es]  ~~|
+CPL Electricity Generation Capacity[municipal solid waste es] = Output Electricity Generation Capacity[
+        municipal solid waste es] 
+	~	GW
+	~		|
+
+CPL Fraction of Distributed Solar PV on Roofs = 0.6
+	~	Dmnl
+	~	The assumed amount of distributed solar PV that is on rooftops, not in \
+		community solar or commercial solar.
+	|
+
+CPL Number of Rooftops in 2030 = CPL Fraction of Distributed Solar PV on Roofs * CPL Distribute Solar PV Capacity in 2030
+             / ( CPL Average Rooftop PV Capacity / kW per MW / MW per GW ) 
+	~	rooftop
+	~	The number of rooftops that have solar PV in 2030.
+	~	:SUPPLEMENTARY 
+	|
+
+CPL Total CO2e Emissions in 2020 = SAMPLE IF TRUE( Time = 2020, "CPL BAU Total CO2e Emission (mmt)"
+             , -1) 
+	~	million metric tons
+	~		|
+
+CPL Total CO2e Emissions Reduction Below 2020 = ( Output Total CO2e Emissions - CPL Total CO2e Emissions in 2020
+             ) / CPL Total CO2e Emissions in 2020 * CPL 100Percent 
+	~	Percentage
+	~		~	:SUPPLEMENTARY 
+	|
+
+CPL Total CO2e Emissions Reduction Below BAU = ( Output Total CO2e Emissions - "CPL BAU Total CO2e Emission (mmt)"
+             ) / "CPL BAU Total CO2e Emission (mmt)" * CPL 100Percent 
+	~	Percentage
+	~		~	:SUPPLEMENTARY 
+	|
+
+"CPL Total CO2e Reduction in 2030 (below 2020)" = SAMPLE IF TRUE( Time = 2030, CPL Total CO2e Emissions Reduction Below 2020
+             , -1) 
+	~	Percentage
+	~		~	:SUPPLEMENTARY 
+	|
+
+CPL Total Process Emissions Available for Reductions[Industry by Process Emissions Policy
+] = SUM ( PERAC Mass CO2e Avoidable by Marginal Cost[Industry by Process Emissions Policy
+             ,Marginal Abatement Cost!] ) 
+	~	g CO2e
+	~		~	:SUPPLEMENTARY 
+	|
+
+ICM CH4 2030 Target = -30
+	~	Dmnl
+	~		|
+
+ICM Distributed Generation 2030 Target = 6.5
+	~	GW
+	~		|
+
+ICM Solar Target Achieved Year = SAMPLE IF TRUE( ( CPL Electricity Generation Capacity[
+             solar PV es] > ICM Solar Target Amount ) :AND: ( ICM Solar Target Achieved Year
+                  > 2099) , Time , 2100) 
+	~	
+	~		|
+
+ICM Solar Target Amount = 27
+	~	GW
+	~		|
+
+ICM Solar Target Year = 2030
+	~	Year
+	~		|
+
+ICM Total CO2e Emissions Reduction Target in 2030 = -35
+	~	Percentage
+	~		~	:SUPPLEMENTARY 
+	|
+
+ICM Transmission Target = 0
+	~	
+	~		|
+
+ICM Wind Target Achieved Year = SAMPLE IF TRUE( ( CPL Electricity Generation Capacity[
+             onshore wind es] > ICM Wind Target Amount ) :AND: ( ICM Wind Target Achieved Year
+                  > 2099) , Time , 2100) 
+	~	
+	~		|
+
+ICM Wind Target Amount = 18
+	~	GW
+	~		|
+
+ICM Wind Target Year = 2030
+	~	Year
+	~		|
+
+Is Minimum Required EV Sales Binding[Vehicle Type,Cargo Type,Vehicle Technology] = IF THEN ELSE ( 
+             New Vehicles after Charger Deployment[Vehicle Type,Cargo Type,Vehicle Technology
+             ] < Minimum Required New Vehicles by Technology[Vehicle Type,Cargo Type,
+                  Vehicle Technology] , 1, 0) 
+	~	
+	~		~	:SUPPLEMENTARY 
+	|
+
+PL Electricity Fuels : hard coal es,natural gas nonpeaker es,nuclear es,hydro es,onshore wind es
+        ,solar PV es,biomass es,geothermal es,petroleum es,municipal solid waste es
+	~	
+	~	Overloading the fuels to consolidate. DANGER!
+	|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME = GET DIRECT CONSTANTS('InputData/plcy-schd/FT/FT.csv', ',', 'B2*')
+	~	Year
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME = GET DIRECT CONSTANTS('InputData/plcy-schd/IT/IT.csv', ',', 'B2*')
+	~	Year
+	~	The initial time for the simulation.
+	|
+
+SAVEPER = TIME STEP 
+	~	Year [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP = 1
+	~	Year [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V301  Do not put anything below this section - it will be ignored
+*CPL Dashboard
+$-1--1--1,0,|12||-1--1--1|-1--1--1|-1--1--1|-1--1--1|-1--1--1|96,96,100,0
+12,0,0,1134,404,603,352,8,15,0,0,1,0,0,0,0,0,0,0,0,0
+GraphDefinitions.vgd : CPL_2035_Summary
+12,0,0,274,290,222,239,8,15,0,0,1,0,0,0,0,0,0,0,0,0
+GraphDefinitions.vgd : CPL_Target_Summary
+\\\---/// Sketch information - do not modify anything except names
+V301  Do not put anything below this section - it will be ignored
+*CPL Graphing Variables
+$-1--1--1,0,|12||-1--1--1|-1--1--1|-1--1--1|-1--1--1|-1--1--1|96,96,100,0
+10,0,Output Electricity Generation Capacity,222,167,72,31,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+10,0,Is Minimum Required EV Sales Binding,446,595,64,16,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,Minimum Required New Vehicles by Technology,238,553,77,39,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,055FAE801AEBED5D62E5EBAAA2E576306F70BD57,A0E092F3006F08EFC44705F857815BA5BCEF2AFC,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,New Vehicles after Charger Deployment,230,641,82,25,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,E43AB46BB6FFBD53D46370B54857EDB78B7DBD56,A0E092F3006F08EFC44705F857815BA5BCEF2AFC,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,OCCF Dollars per Small Output Currency Unit,825,672,57,23,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+10,0,Carbon Tax Rate,1023,666,60,9,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+10,0,CPL Carbon Tax Rate 2019,885,760,48,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,D3A269AB3252D06FEB933831819E0E02A82FC92E,0F9DA2D71CD22ADA00C18B84DDF7C9316D7FD8B5,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,E4EA420C48D2F90F3F7EF0D9CAF9769EA0114284,0F9DA2D71CD22ADA00C18B84DDF7C9316D7FD8B5,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,0,Output Total CH4 Emissions,931,376,58,16,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+10,0,CPL CH4 Emissions in 2020,802,469,57,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,CPL CH4 Emissisions in 2030,1044,470,60,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,"CPL CH4 Emission Reduction 2030 (below 2020)",936,582,73,39,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,FF7CB9BF665C844BFC7BE7CCBA55599489F1E632,50EAC55F58A720043E5F058A823080290BE92EB2,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,FF7CB9BF665C844BFC7BE7CCBA55599489F1E632,07BBE711CC33BFF89A3C8FAEF5514E53A6DCEAA6,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,50EAC55F58A720043E5F058A823080290BE92EB2,3D60905410EA42D72854BD187C77AAC0300F7D1C,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,07BBE711CC33BFF89A3C8FAEF5514E53A6DCEAA6,3D60905410EA42D72854BD187C77AAC0300F7D1C,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,C9E82ED68EF9E03031708449DF4F9C62A1F53242,50EAC55F58A720043E5F058A823080290BE92EB2,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+1,0,C9E82ED68EF9E03031708449DF4F9C62A1F53242,07BBE711CC33BFF89A3C8FAEF5514E53A6DCEAA6,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,0,Time,927,446,23,9,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+10,0,CPL Total Process Emissions Available for Reductions,463,783,59,23,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,PERAC Mass CO2e Avoidable by Marginal Cost,237,770,60,23,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,0AC5016846D10177F283A2153F94C54D5B749313,69020C97E6322E372583CB45B080851F6EDFFBB9,1,0,0,0,0,192,0,-1--1--1,,1|(346,749)|
+10,0,INITIAL TIME,237,52,58,14,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,FINAL TIME,232,97,61,10,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,Output Distributed Solar PV Capacity,220,283,61,16,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+10,0,CPL Distribute Solar PV Capacity in 2030,411,283,60,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,1D6C15E6702E586A5AD9998EE23E3165DD053C6A,589EA6383D1F6BF32A10550E608E49B7C5563636,1,0,0,0,0,192,0,-1--1--1,,1|(316,247)|
+10,0,CPL Average Rooftop PV Capacity,196,375,61,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,CPL Number of Rooftops in 2030,410,375,52,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,589EA6383D1F6BF32A10550E608E49B7C5563636,24579A539AAE8579911CBD72EC2E4BE837C09DB7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,5E82B50A8A0781248D1540C0AEA4C4365C0C0DE0,24579A539AAE8579911CBD72EC2E4BE837C09DB7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,0,CPL Fraction of Distributed Solar PV on Roofs,192,440,60,23,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,A160C95DBE6B979BB84FBE450E869C57A6D57B41,24579A539AAE8579911CBD72EC2E4BE837C09DB7,1,0,0,0,0,192,0,-1--1--1,,1|(288,430)|
+10,0,kW per MW,368,457,41,9,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,5EA341E9EA78B694317F5D8E9A719BE0BF57CC8A,24579A539AAE8579911CBD72EC2E4BE837C09DB7,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,MW per GW,454,447,43,9,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,454AE0AEDCC22802578A5E4F445CE66650B27E40,24579A539AAE8579911CBD72EC2E4BE837C09DB7,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,CPL Coal Generation in 2030,528,157,61,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,420D3F04B9C4EE3596CB29DFC3AB4133E37A3B62,1253CAC2CC834A4ABE2799D9A7DBF72B0132A91E,1,0,0,0,0,192,0,-1--1--1,,1|(454,159)|
+1,0,9C5C1579D25A98B30E75A8B7CAC8F2EE43C120FC,1253CAC2CC834A4ABE2799D9A7DBF72B0132A91E,1,0,0,0,0,64,0,-1--1--1,,1|(562,218)|
+1,0,9C5C1579D25A98B30E75A8B7CAC8F2EE43C120FC,589EA6383D1F6BF32A10550E608E49B7C5563636,1,0,0,0,0,192,0,-1--1--1,,1|(515,270)|
+10,0,ICM Solar Target Amount,907,159,49,16,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,ICM Wind Target Amount,905,223,49,16,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,ICM Transmission Target,1074,192,53,16,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,ICM Solar Target Year,1070,85,49,16,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,ICM Wind Target Year,1068,143,49,16,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,ICM Solar Target Achieved Year,724,164,49,16,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,ICM Wind Target Achieved Year,724,228,49,16,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,420D3F04B9C4EE3596CB29DFC3AB4133E37A3B62,82ABF9A0628EDD0DDF900B6FB62EFEB6DA062335,1,0,0,0,0,64,0,-1--1--1,,1|(578,200)|
+1,0,A0339A841C900FCB5BF24FAC07154035B87AF300,82ABF9A0628EDD0DDF900B6FB62EFEB6DA062335,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,CPL Electricity Generation Capacity,417,199,64,16,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,420D3F04B9C4EE3596CB29DFC3AB4133E37A3B62,A4C79EC3C21986ACEFCFC211E1A9B61BABBABAB2,1,0,0,0,0,64,0,-1--1--1,,1|(576,223)|
+1,0,BCB783ED8FD33F9B6E9FA4FF6A6DA961E7696607,A4C79EC3C21986ACEFCFC211E1A9B61BABBABAB2,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+1,0,9C5C1579D25A98B30E75A8B7CAC8F2EE43C120FC,A4C79EC3C21986ACEFCFC211E1A9B61BABBABAB2,1,0,0,0,0,64,0,-1--1--1,,1|(631,266)|
+10,0,Time,548,246,32,16,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,9C5C1579D25A98B30E75A8B7CAC8F2EE43C120FC,82ABF9A0628EDD0DDF900B6FB62EFEB6DA062335,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,ICM CH4 2030 Target,1072,255,42,16,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,ICM Distributed Generation 2030 Target,1071,321,49,24,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,CPL Total CO2e Emissions Reduction Below BAU,644,1049,62,23,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,CPL Total CO2e Emissions Reduction Below 2020,602,921,62,23,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,0,Output Total CO2e Emissions,256,922,61,16,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+10,0,BAU Total CO2e Emissions,236,1016,53,16,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,4629EA1BC974056C22A930DB105E605D9ED07ACD,D7D2A96AF829A8BFED32191AC17D91BDABDDFF4F,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,D6F6D7734A97B402854D4A01A6163729C3754759,8A6189132EF6D2F2DD91425C7963163E557AAE2D,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,0,"CPL BAU Total CO2e Emission (mmt)",372,1077,61,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,D7D2A96AF829A8BFED32191AC17D91BDABDDFF4F,8A6189132EF6D2F2DD91425C7963163E557AAE2D,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,0,Grams per Million Metric Tons CO2e,197,1095,68,23,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,81F8D3079AC82F25DFC45351915BDF83AC246F46,D7D2A96AF829A8BFED32191AC17D91BDABDDFF4F,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,CPL 100Percent,585,983,60,17,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,E6D63BEBA7AC3DB54BA9F56BB104126BDE06F80E,8A6189132EF6D2F2DD91425C7963163E557AAE2D,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,CPL Total CO2e Emissions in 2020,427,910,55,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,D7D2A96AF829A8BFED32191AC17D91BDABDDFF4F,EBDBECFD87EEC45E579C6DB03E188625DE6AE338,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,E6D63BEBA7AC3DB54BA9F56BB104126BDE06F80E,0DD56A9FBDC87710FF622336A1C6B0DB1931D814,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,EBDBECFD87EEC45E579C6DB03E188625DE6AE338,0DD56A9FBDC87710FF622336A1C6B0DB1931D814,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,0,D6F6D7734A97B402854D4A01A6163729C3754759,0DD56A9FBDC87710FF622336A1C6B0DB1931D814,1,0,0,0,0,192,0,-1--1--1,,1|(470,955)|
+1,0,52461CAD120E17E7BC7EBD22669F8CA7BAA5FC59,EBDBECFD87EEC45E579C6DB03E188625DE6AE338,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,"CPL Total CO2e Reduction in 2030 (below 2020)",650,829,74,26,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,0DD56A9FBDC87710FF622336A1C6B0DB1931D814,618D2FF9522BA206728A04353464BFF2C6757D22,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,0,Time,484,851,23,9,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,0,52461CAD120E17E7BC7EBD22669F8CA7BAA5FC59,618D2FF9522BA206728A04353464BFF2C6757D22,0,0,0,0,0,64,0,-1--1--1,,1|(0,0)|
+10,0,ICM Total CO2e Emissions Reduction Target in 2030,1212,91,62,23,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+///---\\\
+:L<%^E!@
+8:GraphDefinitions.vgd
+15:0,0,0,0,0,0
+27:0,
+34:0,
+42:0
+72:0
+73:0
+95:1
+96:2
+97:0
+98:1
+77:0
+78:0
+102:1
+93:1
+94:2
+92:0
+91:0
+90:0
+87:0
+75:
+43:
+103:8,8,8,3,8
+105:0,0,0,0,0,0,0,0,0,0
+104:Lucida Grande|12||0-0-0|0-0-0|-1--1--1|0-0-255|192-192-192|-1--1--1
+83:EPS.mdl
