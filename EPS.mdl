@@ -9001,24 +9001,24 @@ FoHObDT Fraction of Health Outcomes by Demographic Trait[Sectors,SOx,nonhispanic
 	~	Dmnl
 	~		|
 
-FoPITY Fraction of Policy Implemented This Year[Schedule1,Policy Element] ( GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-1.csv', ',', '1', 'E2') ) ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule2,Policy Element] ( GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-2.csv', ',', '1', 'E2') ) ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule3,Policy Element] ( GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-3.csv', ',', '1', 'E2') ) ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule4,Policy Element] ( GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-4.csv', ',', '1', 'E2') ) ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule5,Policy Element] ( GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-5.csv', ',', '1', 'E2') ) ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule6,Policy Element] ( GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-6.csv', ',', '1', 'E2') ) ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule7,Policy Element] ( GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-7.csv', ',', '1', 'E2') ) ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule8,Policy Element] ( GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-8.csv', ',', '1', 'E2') ) ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule9,Policy Element] ( GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-9.csv', ',', '1', 'E2') )
+FoPITY Fraction of Policy Implemented This Year[Schedule1,Policy Element] = GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-1.csv', ',', '1', 'E2') ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule2,Policy Element] = GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-2.csv', ',', '1', 'E2') ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule3,Policy Element] = GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-3.csv', ',', '1', 'E2') ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule4,Policy Element] = GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-4.csv', ',', '1', 'E2') ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule5,Policy Element] = GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-5.csv', ',', '1', 'E2') ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule6,Policy Element] = GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-6.csv', ',', '1', 'E2') ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule7,Policy Element] = GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-7.csv', ',', '1', 'E2') ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule8,Policy Element] = GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-8.csv', ',', '1', 'E2') ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule9,Policy Element] = GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-9.csv', ',', '1', 'E2')
 	~	Dmnl
 	~		|
 
