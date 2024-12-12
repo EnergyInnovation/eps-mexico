@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Created on Apr 09 14:16:41 2024
-Updated on Oct 11 16:58:41 2024
+Created on Apr 09 2024
+Last updated on Oct 27 2024
 
 @author: Olivia Ashmoore
 @author: Travis Franck
 """
 
 import os
+import sys
 import pandas as pd
 from enum import Enum
 import argparse
@@ -19,7 +20,8 @@ import curses
 # --------------------------------------------------------
 # The string value should be the path relative to first directory
 class MenuChoices(Enum):
-    CHOICE_All = r"InputData"
+    CHOICE_CANCEL = r"Cancel"
+    CHOICE_All = r"All of InputData"
     CHOICE_ADD_OUTPUTS = r"add-outputs"
     CHOICE_BLDGS = r"bldgs"
     CHOICE_CCS = r"ccs"
@@ -84,10 +86,11 @@ def present_menu(stdscr):
 def set_root_path(selection):
     if selection == MenuChoices.CHOICE_All.value:
         # print(f"You selected {selection}")
-        return selection
+        return "InputData"
     else:
         # print(f"You selected {selection}")
-        return MenuChoices.CHOICE_All.value + "/" + selection
+        # BUGBUG: use join() to make OS independent
+        return os.path.join("InputData", selection)
 
 
 # --------------------------------------------------------
@@ -137,7 +140,11 @@ elif args.menu_choice:
 else:
     # Present a menu and set the path to the XLS/CSV files
     selected_choice = curses.wrapper(present_menu)
-    root_directory = set_root_path(selected_choice)
+    if selected_choice == MenuChoices.CHOICE_CANCEL.value:
+        print("Canceling CSV export")
+        sys.exit(0)
+    else:
+        root_directory = set_root_path(selected_choice)
 print("Processing files in " + root_directory)
 
 
