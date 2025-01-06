@@ -9001,24 +9001,24 @@ FoHObDT Fraction of Health Outcomes by Demographic Trait[Sectors,SOx,nonhispanic
 	~	Dmnl
 	~		|
 
-FoPITY Fraction of Policy Implemented This Year[Schedule1,Policy Element] = GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-1.csv', ',', '1', 'E2') ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule2,Policy Element] = GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-2.csv', ',', '1', 'E2') ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule3,Policy Element] = GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-3.csv', ',', '1', 'E2') ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule4,Policy Element] = GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-4.csv', ',', '1', 'E2') ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule5,Policy Element] = GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-5.csv', ',', '1', 'E2') ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule6,Policy Element] = GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-6.csv', ',', '1', 'E2') ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule7,Policy Element] = GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-7.csv', ',', '1', 'E2') ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule8,Policy Element] = GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-8.csv', ',', '1', 'E2') ~~|
-FoPITY Fraction of Policy Implemented This Year[Schedule9,Policy Element] = GET DIRECT LOOKUPS(
-                    'InputData/plcy-schd/FoPITY/FoPITY-9.csv', ',', '1', 'E2')
+FoPITY Fraction of Policy Implemented This Year[Schedule1,Policy Element] ( GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-1.csv', ',', '1', 'E2') ) ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule2,Policy Element] ( GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-2.csv', ',', '1', 'E2') ) ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule3,Policy Element] ( GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-3.csv', ',', '1', 'E2') ) ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule4,Policy Element] ( GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-4.csv', ',', '1', 'E2') ) ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule5,Policy Element] ( GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-5.csv', ',', '1', 'E2') ) ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule6,Policy Element] ( GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-6.csv', ',', '1', 'E2') ) ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule7,Policy Element] ( GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-7.csv', ',', '1', 'E2') ) ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule8,Policy Element] ( GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-8.csv', ',', '1', 'E2') ) ~~|
+FoPITY Fraction of Policy Implemented This Year[Schedule9,Policy Element] ( GET DIRECT LOOKUPS(
+                    'InputData/plcy-schd/FoPITY/FoPITY-9.csv', ',', '1', 'E2') )
 	~	Dmnl
 	~		|
 
@@ -22806,8 +22806,8 @@ Price - Efficiency Feedbacks for New Components
 Applying Envelope Effects
 10,0,Hypothetical BAU New Components Energy Use after Fuel Shifting,4437,601,96,28,8,131,0,0,0,0,0,0,0,0,0,0,0,0
 10,0,Hypothetical BAU Last Year Components Energy Use,4070,746,79,32,3,131,0,0,0,0,0,0,0,0,0,0,0,0
-12,0,48,4067,1005,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
-1,0,F12C64391179B1F074CA06A5DCEEF1AE219D9A5F,9587B145FB3195DB5FA09745B6EB28F4D4293D22,4,0,0,22,0,0,0,-1--1--1,,1|(4069,947)|
+12,0,48,4069,1005,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,F12C64391179B1F074CA06A5DCEEF1AE219D9A5F,59DBED531F6FA744E86E7737B5E4118FE80085C4,4,0,0,22,0,0,0,-1--1--1,,1|(4069,947)|
 1,0,F12C64391179B1F074CA06A5DCEEF1AE219D9A5F,3487EB8D8EC983AC887F757BB1FB4A82962EE3DE,100,0,0,22,0,0,0,-1--1--1,,1|(4069,830)|
 11,0,0,4069,890,8,8,33,3,0,0,4,0,0,0,0,0,0,0,0,0
 10,0,Hypothetical BAU Retiring Components Energy Use after Envelope Effects,4166,890,87,28,40,131,0,0,-1,0,0,0,0,0,0,0,0,0
@@ -25631,9 +25631,9 @@ Solar PV, Onshore Wind, Offshore Wind
 1,0,08A13FD8F0EA832E6A237747D6CB98765D39BD84,8754786D0ED47BF4DB1D01D014A18A18A90ADCFE,0,0,0,0,0,128,1,-1--1--1,,1|(0,0)|
 10,0,Cumulative Vehicles Deployed as of Last Year,2128,91,84,19,8,3,0,0,0,0,0,0,0,0,0,0,0,0
 1,0,8754786D0ED47BF4DB1D01D014A18A18A90ADCFE,9397F742ADC88207DE10A9554127652600862114,0,0,0,0,0,128,0,-1--1--1,,1|(0,0)|
-12,0,48,1804,237,12,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
-1,0,6FC0D1A559E1D806FB4DB10B73D460E7EAD88431,8754786D0ED47BF4DB1D01D014A18A18A90ADCFE,4,0,0,22,0,0,0,-1--1--1,,1|(1991,237)|
-1,0,6FC0D1A559E1D806FB4DB10B73D460E7EAD88431,73ECF61B9EC3FFD1AAB699E3B20403A526A48D97,100,0,0,22,0,0,0,-1--1--1,,1|(1867,237)|
+12,0,48,1804,237,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,6FC0D1A559E1D806FB4DB10B73D460E7EAD88431,8754786D0ED47BF4DB1D01D014A18A18A90ADCFE,4,0,0,22,0,0,0,-1--1--1,,1|(1993,237)|
+1,0,6FC0D1A559E1D806FB4DB10B73D460E7EAD88431,4711501CCBBC2D891A9498F3039C48856FC3BB23,100,0,0,22,0,0,0,-1--1--1,,1|(1867,237)|
 11,0,0,1929,237,8,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
 10,0,New Vehicles Last Year,1929,264,45,19,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
 1,0,10DF51496169AEC55144CC85224874AEB6CE128E,6FC0D1A559E1D806FB4DB10B73D460E7EAD88431,0,0,0,0,0,128,0,-1--1--1,,1|(0,0)|
@@ -25649,9 +25649,9 @@ Solar PV, Onshore Wind, Offshore Wind
 1,0,6733AF6B64373CC787637A1C03216A643ECAB0EF,533A9786A55E9F3A2C24C473A6BA4A99A0043BD0,0,0,0,0,0,128,1,-1--1--1,,1|(0,0)|
 10,0,BAU Cumulative Vehicles Deployed as of Last Year,2128,865,83,19,8,3,0,0,0,0,0,0,0,0,0,0,0,0
 1,0,533A9786A55E9F3A2C24C473A6BA4A99A0043BD0,CA21C4DCAC4C1E69236BA54250003DB826E94EB9,0,0,0,0,0,128,0,-1--1--1,,1|(0,0)|
-12,0,48,1781,992,12,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
-1,0,1D51BA57B3C0093FC4C45C5040EE5870C755F0D5,533A9786A55E9F3A2C24C473A6BA4A99A0043BD0,4,0,0,22,0,0,0,-1--1--1,,1|(1991,992)|
-1,0,1D51BA57B3C0093FC4C45C5040EE5870C755F0D5,95875E92C3833035E065C0DC9F39A59BE6618176,100,0,0,22,0,0,0,-1--1--1,,1|(1857,992)|
+12,0,48,1781,992,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,0,1D51BA57B3C0093FC4C45C5040EE5870C755F0D5,533A9786A55E9F3A2C24C473A6BA4A99A0043BD0,4,0,0,22,0,0,0,-1--1--1,,1|(1993,992)|
+1,0,1D51BA57B3C0093FC4C45C5040EE5870C755F0D5,42F9276CAA11ECB297014A60C1DD273C22EBEF73,100,0,0,22,0,0,0,-1--1--1,,1|(1856,992)|
 11,0,0,1929,992,8,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
 10,0,BAU New Vehicles Last Year,1929,1019,64,19,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
 1,0,1D51BA57B3C0093FC4C45C5040EE5870C755F0D5,CA21C4DCAC4C1E69236BA54250003DB826E94EB9,0,0,0,0,0,128,0,-1--1--1,,1|(0,0)|
@@ -29537,6 +29537,7 @@ Revenue changes for fuel-supplying cash flow entities should be the same after a
 22:water output unit,water output units
 22:Week,Weeks
 22:Year,Years,yr,yrs
+10:ICM&CPL Scenario_CAS.cin
 23:0
 15:0,0,0,0,0,0
 27:0,
