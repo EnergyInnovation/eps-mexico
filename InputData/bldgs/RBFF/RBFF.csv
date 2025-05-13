@@ -1,9 +1,9 @@
 To type (below)  / From type (right),electricity,hard coal,natural gas,petroleum diesel,heat,biomass,kerosene,heavy or residual fuel oil,LPG propane or butane,hydrogen
-electricity,1,1,1,1,1,0,1,1,1,1
+electricity,1,0.75,0.75,0.75,1,0.75,0.75,0.75,0.75,0.75
 hard coal,0,0,0,0,0,0,0,0,0,0
 natural gas,0,0,0,0,0,0,0,0,0,0
 petroleum diesel,0,0,0,0,0,0,0,0,0,0
-heat,0,0,0,0,0,0,0,0,0,0
+heat,0,0.25,0.25,0.25,0,0.25,0.25,0.25,0.25,0.25
 biomass,0,0,0,0,0,1,0,0,0,0
 kerosene,0,0,0,0,0,0,0,0,0,0
 heavy or residual fuel oil,0,0,0,0,0,0,0,0,0,0

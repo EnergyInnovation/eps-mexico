@@ -1,7 +1,16 @@
 Fraction Owned by Entity (dimensionless),government,domestic industries,labor and consumers,foreign entities
-LDVs,0.002560718,0.000996402,0.996442881,0
-HDVs,0.140304836,0.859695164,0,0
-aircraft,0,1,0,0
-rail,1,0,0,0
-ships,0,0,1,0
-motorbikes,0.001563639,0,0.998436361,0
+LDVs,0.0018,0.0205,0.9777,0
+HDVs,0.0073,0.4175,0.5752,0
+aircraft,#REF!,#REF!,#REF!,0
+rail,#REF!,#REF!,#REF!,0
+ships,#REF!,#REF!,#REF!,0
+motorbikes,0.9933,0.0036,0.0030,0
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

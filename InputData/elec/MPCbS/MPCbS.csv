@@ -1,25 +1,25 @@
-﻿Electricity Source,Max Potential Capacity (MW)
-hard coal,9000000000000
-natural gas steam turbine,9000000000000
-natural gas combined cycle,9000000000000
-nuclear,9000000000000
-hydro,187600
-onshore wind,11000000
-solar PV,154864000
-solar thermal,38000000
-biomass,62000
-geothermal,4000000
-petroleum,9000000000000
-natural gas peaker,9000000000000
-lignite,9000000000000
-offshore wind,4200000
-crude oil,0
-heavy or residual fuel oil,0
-municipal solid waste,8031
-hard coal w CCS,9000000000000
-natural gas combined cycle w CCS,9000000000000
-biomass w CCS,62000
-lignite w CCS,9000000000000
-small modular reactor,9000000000000
-hydrogen combustion turbine,9000000000000
-hydrogen combined cycle,9000000000000
+Electricity Source,Max Potential Capacity (MW),,,,,,
+hard coal,9000000000000,,,,,,
+natural gas steam turbine,9000000000000,,,,,,
+natural gas combined cycle,9000000000000,,,,,,
+nuclear,9000000000000,,,,,,
+hydro,28000,,,,,,
+onshore wind,2566830,,,,,,
+solar PV,3965770,,,,,,
+solar thermal,93267,,,,,,
+biomass,273884,,,,,,
+geothermal,52614,,,,,,
+petroleum,9000000000000,,,,,,
+natural gas peaker,9000000000000,,,,,,
+lignite,9000000000000,,,,,,
+offshore wind,78867,,,,,,
+crude oil,0,,,,,,
+heavy or residual fuel oil,0,,,,,,
+municipal solid waste,4104,,,,,,
+hard coal w CCS,9000000000000,,,,,,
+natural gas combined cycle w CCS,9000000000000,,,,,,
+biomass w CCS,273884,,,,,,
+lignite w CCS,9000000000000,,,,,,
+small modular reactor,9000000000000,,,,,,
+hydrogen combustion turbine,9000000000000,,,,,,
+hydrogen combined cycle,9000000000000,,,,,,
