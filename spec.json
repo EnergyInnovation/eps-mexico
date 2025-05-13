@@ -1,0 +1,6 @@
+{
+  "separateAllVarsWithDims": ["_optimization_pass"],
+  "dimensionFamilies": {
+    "electricity source within all fuels": "All Fuels"
+  }
+}
