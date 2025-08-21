@@ -1,0 +1,7 @@
+:C Last updated February 2, 20245 at 11:35:05 PM EDT
+:C
+Additional Minimum Required EV Sales Percentage[freight,HDVs] = 1
+Additional Minimum Required EV Sales Percentage[freight,LDVs] = 1
+Additional Minimum Required EV Sales Percentage[passenger,HDVs] = 1
+Additional Minimum Required EV Sales Percentage[passenger,LDVs] = 1
+Policy Implementation Schedule Selector = 2
