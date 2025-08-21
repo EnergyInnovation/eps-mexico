@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 18.5 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="7.500in" height="4.500in" viewBox="0 0 5400 3240" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - graph13</desc>
+	<rect x="0" y="0" width="5400" height="3240" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="5400.00" height="3240.00" style="fill:#FFFFFF"/>
+	<rect x="3.24" y="3.24" width="5393.52" height="3233.52" style="fill:none;stroke:#FFFFFF;stroke-width:6.48"/>
+	<rect x="38.81" y="38.81" width="4190.40" height="3162.38" style="fill:#FFFFFF"/>
+	<rect x="42.05" y="42.05" width="4183.92" height="3155.90" style="fill:none;stroke:#FFFFFF;stroke-width:6.48"/>
+	<defs>
+		<clipPath id="clipPath_INQCLvqC">
+			<path d="M2134.01 1620.00 L2772.08 251.65 A1509.81 1509.81 0 0 0 2134.01 110.19 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2134.01 1620.00 L2772.08 251.65 A1509.81 1509.81 0 0 0 2134.01 110.19 Z" style="stroke:none;fill:#5FBEFF"/>
+	<path d="M2134.01 1620.00 L2772.08 251.65 A1509.81 1509.81 0 0 0 2134.01 110.19 Z" style="fill:none;stroke:#4DB7FF;stroke-width:6.00" clip-path="url(#clipPath_INQCLvqC)"/>
+	<defs>
+		<clipPath id="clipPath_xMbGDDgp">
+			<path d="M2134.01 1620.00 L3502.36 2258.07 A1509.81 1509.81 0 0 0 2772.08 251.65 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2134.01 1620.00 L3502.36 2258.07 A1509.81 1509.81 0 0 0 2772.08 251.65 Z" style="stroke:none;fill:#FF8C19"/>
+	<path d="M2134.01 1620.00 L3502.36 2258.07 A1509.81 1509.81 0 0 0 2772.08 251.65 Z" style="fill:none;stroke:#FF7F00;stroke-width:6.00" clip-path="url(#clipPath_xMbGDDgp)"/>
+	<defs>
+		<clipPath id="clipPath_ZMnJiQxy">
+			<path d="M2134.01 1620.00 L2600.57 3055.91 A1509.81 1509.81 0 0 0 3502.36 2258.07 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2134.01 1620.00 L2600.57 3055.91 A1509.81 1509.81 0 0 0 3502.36 2258.07 Z" style="stroke:none;fill:#FF1919"/>
+	<path d="M2134.01 1620.00 L2600.57 3055.91 A1509.81 1509.81 0 0 0 3502.36 2258.07 Z" style="fill:none;stroke:#FF0000;stroke-width:6.00" clip-path="url(#clipPath_ZMnJiQxy)"/>
+	<defs>
+		<clipPath id="clipPath_ydPwedlS">
+			<path d="M2134.01 1620.00 L2002.42 3124.06 A1509.81 1509.81 0 0 0 2600.57 3055.91 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2134.01 1620.00 L2002.42 3124.06 A1509.81 1509.81 0 0 0 2600.57 3055.91 Z" style="stroke:none;fill:#668344"/>
+	<path d="M2134.01 1620.00 L2002.42 3124.06 A1509.81 1509.81 0 0 0 2600.57 3055.91 Z" style="fill:none;stroke:#55752F;stroke-width:6.00" clip-path="url(#clipPath_ydPwedlS)"/>
+	<defs>
+		<clipPath id="clipPath_OgADuNxP">
+			<path d="M2134.01 1620.00 L800.93 911.19 A1509.81 1509.81 0 0 0 2002.42 3124.06 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2134.01 1620.00 L800.93 911.19 A1509.81 1509.81 0 0 0 2002.42 3124.06 Z" style="stroke:none;fill:#FFFF19"/>
+	<path d="M2134.01 1620.00 L800.93 911.19 A1509.81 1509.81 0 0 0 2002.42 3124.06 Z" style="fill:none;stroke:#FFFF00;stroke-width:6.00" clip-path="url(#clipPath_OgADuNxP)"/>
+	<defs>
+		<clipPath id="clipPath_kaMLYitQ">
+			<path d="M2134.01 1620.00 L2134.01 110.19 A1509.81 1509.81 0 0 0 800.93 911.19 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2134.01 1620.00 L2134.01 110.19 A1509.81 1509.81 0 0 0 800.93 911.19 Z" style="stroke:none;fill:#19FF19"/>
+	<path d="M2134.01 1620.00 L2134.01 110.19 A1509.81 1509.81 0 0 0 800.93 911.19 Z" style="fill:none;stroke:#00FF00;stroke-width:6.00" clip-path="url(#clipPath_kaMLYitQ)"/>
+	<text x="2353.73" y="669.23" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Hydro</text>
+	<text x="3079.86" y="1307.10" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Natural Gas</text>
+	<text x="2804.63" y="2402.12" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Oil</text>
+	<text x="2247.24" y="2651.70" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Other</text>
+	<text x="1249.76" y="2132.29" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Solar</text>
+	<text x="1612.24" y="790.73" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Wind</text>
+	<rect x="4268.02" y="1042.71" width="1054.18" height="1154.59" style="fill:#FFFFFF"/>
+	<rect x="4271.26" y="1045.95" width="1047.70" height="1148.11" style="fill:none;stroke:#FFFFFF;stroke-width:6.48"/>
+	<rect x="4316.63" y="1091.31" width="259.20" height="112.39" style="fill:#9B494F"/>
+	<rect x="4318.13" y="1092.81" width="256.20" height="109.39" style="fill:none;stroke:#9B494F;stroke-width:3.00"/>
+	<rect x="4316.63" y="1248.75" width="259.20" height="112.56" style="fill:#5FBEFF"/>
+	<rect x="4318.13" y="1250.25" width="256.20" height="109.56" style="fill:none;stroke:#5FBEFF;stroke-width:3.00"/>
+	<rect x="4316.63" y="1406.19" width="259.20" height="112.56" style="fill:#FF8C19"/>
+	<rect x="4318.13" y="1407.69" width="256.20" height="109.56" style="fill:none;stroke:#FF8C19;stroke-width:3.00"/>
+	<rect x="4316.63" y="1563.81" width="259.20" height="112.39" style="fill:#FF1919"/>
+	<rect x="4318.13" y="1565.31" width="256.20" height="109.39" style="fill:none;stroke:#FF1919;stroke-width:3.00"/>
+	<rect x="4316.63" y="1721.25" width="259.20" height="112.56" style="fill:#668344"/>
+	<rect x="4318.13" y="1722.75" width="256.20" height="109.56" style="fill:none;stroke:#668344;stroke-width:3.00"/>
+	<rect x="4316.63" y="1878.69" width="259.20" height="112.56" style="fill:#FFFF19"/>
+	<rect x="4318.13" y="1880.19" width="256.20" height="109.56" style="fill:none;stroke:#FFFF19;stroke-width:3.00"/>
+	<rect x="4316.63" y="2036.31" width="259.20" height="112.39" style="fill:#19FF19"/>
+	<rect x="4318.13" y="2037.81" width="256.20" height="109.39" style="fill:none;stroke:#19FF19;stroke-width:3.00"/>
+	<text x="4643.33" y="1186.94" style="font-family:'Helvetica';font-size:112.56px;fill:#000000">Coal</text>
+	<text x="4643.33" y="1344.38" style="font-family:'Helvetica';font-size:112.56px;fill:#000000">Hydro</text>
+	<text x="4643.33" y="1501.99" style="font-family:'Helvetica';font-size:112.56px;fill:#000000">Natural Gas</text>
+	<text x="4643.33" y="1659.44" style="font-family:'Helvetica';font-size:112.56px;fill:#000000">Oil</text>
+	<text x="4643.33" y="1816.88" style="font-family:'Helvetica';font-size:112.56px;fill:#000000">Other</text>
+	<text x="4643.33" y="1974.49" style="font-family:'Helvetica';font-size:112.56px;fill:#000000">Solar</text>
+	<text x="4643.33" y="2131.94" style="font-family:'Helvetica';font-size:112.56px;fill:#000000">Wind</text>
+</svg>
