@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 18.5 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="7.500in" height="4.500in" viewBox="0 0 5400 3240" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - graph15</desc>
+	<rect x="0" y="0" width="5400" height="3240" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="5400.00" height="3240.00" style="fill:#FFFFFF"/>
+	<rect x="3.24" y="3.24" width="5393.52" height="3233.52" style="fill:none;stroke:#FFFFFF;stroke-width:6.48"/>
+	<rect x="38.81" y="235.24" width="5166.79" height="2965.95" style="fill:#FFFFFF"/>
+	<rect x="42.05" y="238.48" width="5160.31" height="2959.47" style="fill:none;stroke:#FFFFFF;stroke-width:6.48"/>
+	<defs>
+		<clipPath id="clipPath_GlvYbiRi">
+			<path d="M2622.21 1718.21 L3411.56 547.95 A1411.59 1411.59 0 0 0 2622.21 306.62 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L3411.56 547.95 A1411.59 1411.59 0 0 0 2622.21 306.62 Z" style="stroke:none;fill:#1919FF"/>
+	<path d="M2622.21 1718.21 L3411.56 547.95 A1411.59 1411.59 0 0 0 2622.21 306.62 Z" style="fill:none;stroke:#0000FF;stroke-width:6.00" clip-path="url(#clipPath_GlvYbiRi)"/>
+	<defs>
+		<clipPath id="clipPath_pUChFTma">
+			<path d="M2622.21 1718.21 L3584.91 2750.59 A1411.59 1411.59 0 0 0 3411.56 547.95 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L3584.91 2750.59 A1411.59 1411.59 0 0 0 3411.56 547.95 Z" style="stroke:none;fill:#FF5819"/>
+	<path d="M2622.21 1718.21 L3584.91 2750.59 A1411.59 1411.59 0 0 0 3411.56 547.95 Z" style="fill:none;stroke:#FF4500;stroke-width:6.00" clip-path="url(#clipPath_pUChFTma)"/>
+	<defs>
+		<clipPath id="clipPath_mLDuSyhE">
+			<path d="M2622.21 1718.21 L3566.75 2767.23 A1411.59 1411.59 0 0 0 3584.91 2750.59 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L3566.75 2767.23 A1411.59 1411.59 0 0 0 3584.91 2750.59 Z" style="stroke:none;fill:#FF8C19"/>
+	<path d="M2622.21 1718.21 L3566.75 2767.23 A1411.59 1411.59 0 0 0 3584.91 2750.59 Z" style="fill:none;stroke:#FF7F00;stroke-width:6.00" clip-path="url(#clipPath_mLDuSyhE)"/>
+	<defs>
+		<clipPath id="clipPath_BkYJQLlJ">
+			<path d="M2622.21 1718.21 L3391.02 2902.07 A1411.59 1411.59 0 0 0 3566.75 2767.23 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L3391.02 2902.07 A1411.59 1411.59 0 0 0 3566.75 2767.23 Z" style="stroke:none;fill:#19C58C"/>
+	<path d="M2622.21 1718.21 L3391.02 2902.07 A1411.59 1411.59 0 0 0 3566.75 2767.23 Z" style="fill:none;stroke:#00BF7F;stroke-width:6.00" clip-path="url(#clipPath_BkYJQLlJ)"/>
+	<defs>
+		<clipPath id="clipPath_ZRMjaxtv">
+			<path d="M2622.21 1718.21 L1304.37 1212.34 A1411.59 1411.59 0 0 0 3391.02 2902.07 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L1304.37 1212.34 A1411.59 1411.59 0 0 0 3391.02 2902.07 Z" style="stroke:none;fill:#FFFF19"/>
+	<path d="M2622.21 1718.21 L1304.37 1212.34 A1411.59 1411.59 0 0 0 3391.02 2902.07 Z" style="fill:none;stroke:#FFFF00;stroke-width:6.00" clip-path="url(#clipPath_ZRMjaxtv)"/>
+	<defs>
+		<clipPath id="clipPath_pUjkcpGR">
+			<path d="M2622.21 1718.21 L2622.21 306.62 A1411.59 1411.59 0 0 0 1304.37 1212.34 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L2622.21 306.62 A1411.59 1411.59 0 0 0 1304.37 1212.34 Z" style="stroke:none;fill:#198D19"/>
+	<path d="M2622.21 1718.21 L2622.21 306.62 A1411.59 1411.59 0 0 0 1304.37 1212.34 Z" style="fill:none;stroke:#008000;stroke-width:6.00" clip-path="url(#clipPath_pUjkcpGR)"/>
+	<text x="2895.92" y="849.28" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Hydro</text>
+	<text x="3560.63" y="1677.85" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Natural Gas</text>
+	<text x="3654.11" y="2847.62" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Oil</text>
+	<text x="2672.16" y="2790.59" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Other (Biomass, Nuclear, Geo, and MW)</text>
+	<text x="2297.87" y="1937.22" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Solar</text>
+	<text x="2091.82" y="972.30" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Wind</text>
+	<rect x="5244.41" y="1679.23" width="77.79" height="77.79" style="fill:#FFFFFF"/>
+	<rect x="5247.65" y="1682.47" width="71.31" height="71.31" style="fill:none;stroke:#FFFFFF;stroke-width:6.48"/>
+	<text x="2622.21" y="211.21" style="font-family:'Helvetica';font-size:157.44px;fill:#000000" text-anchor="middle">CAS (2030)</text>
+</svg>

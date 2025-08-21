@@ -1,0 +1,31 @@
+:C Last updated February 2, 20245 at 11:35:05 PM EDT
+:C
+Additional Minimum Required EV Sales Percentage[freight,HDVs] = 1
+Additional Minimum Required EV Sales Percentage[freight,LDVs] = 1
+Additional Minimum Required EV Sales Percentage[passenger,HDVs] = 1
+Additional Minimum Required EV Sales Percentage[passenger,LDVs] = 1
+Additional EV Subsidy Percentage[passenger,LDVs] = 0
+Additional EV Subsidy Percentage[passenger,HDVs] = 0
+Additional EV Subsidy Percentage[freight,LDVs] = 0
+Additional EV Subsidy Percentage[freight,HDVs] = 0
+EV Charger Deployment = 150
+Percent of Travel Demand Shifted to Other Modes or Eliminated[freight,HDVs] = 0.4
+Percent of Travel Demand Shifted to Other Modes or Eliminated[freight,LDVs] = 0.3
+Percent of Travel Demand Shifted to Other Modes or Eliminated[passenger,HDVs] = 0.22
+Percent of Travel Demand Shifted to Other Modes or Eliminated[passenger,LDVs] = 0.2
+Additional Carbon Tax Rate[electricity sector] = 100
+Additional Carbon Tax Rate[transportation sector] = 96
+Electricity Sector Fraction of Potential Additional CCS Achieved[natural gas nonpeaker es] = 0.45
+Electricity Sector Fraction of Potential Additional CCS Achieved[natural gas peaker es] = 0.45
+Fraction of Additional Grid Battery Storage Potential Achieved = 0.05
+Percentage Increase in Transmission Capacity vs BAU = 0.65
+Renewable Portfolio Std Percentage = 0.65
+Percent Reduction in BAU Subsidies[jet fuel or kerosene] = 1
+Percent Reduction in BAU Subsidies[natural gas] = 1
+Percent Reduction in BAU Subsidies[petroleum diesel] = 1
+Percent Reduction in BAU Subsidies[petroleum gasoline] = 1
+Boolean Ban New Power Plants[hard coal es] = 1
+Boolean Ban New Power Plants[heavy or residual fuel oil es] = 1
+Boolean Ban New Power Plants[natural gas nonpeaker es] = 1
+Boolean Ban New Power Plants[natural gas peaker es] = 1
+Policy Implementation Schedule Selector = 2

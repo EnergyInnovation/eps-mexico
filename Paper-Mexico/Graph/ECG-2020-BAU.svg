@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 18.5 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="7.500in" height="4.500in" viewBox="0 0 5400 3240" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - graph19</desc>
+	<rect x="0" y="0" width="5400" height="3240" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="5400.00" height="3240.00" style="fill:#FFFFFF"/>
+	<rect x="3.24" y="3.24" width="5393.52" height="3233.52" style="fill:none;stroke:#FFFFFF;stroke-width:6.48"/>
+	<rect x="38.81" y="235.24" width="5166.79" height="2965.95" style="fill:#FFFFFF"/>
+	<rect x="42.05" y="238.48" width="5160.31" height="2959.47" style="fill:none;stroke:#FFFFFF;stroke-width:6.48"/>
+	<defs>
+		<clipPath id="clipPath_ltQaoGUb">
+			<path d="M2622.21 1718.21 L3151.00 409.41 A1411.59 1411.59 0 0 0 2622.21 306.62 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L3151.00 409.41 A1411.59 1411.59 0 0 0 2622.21 306.62 Z" style="stroke:none;fill:#9B494F"/>
+	<path d="M2622.21 1718.21 L3151.00 409.41 A1411.59 1411.59 0 0 0 2622.21 306.62 Z" style="fill:none;stroke:#90353B;stroke-width:6.00" clip-path="url(#clipPath_ltQaoGUb)"/>
+	<defs>
+		<clipPath id="clipPath_UyohMfmo">
+			<path d="M2622.21 1718.21 L3964.71 1282.01 A1411.59 1411.59 0 0 0 3151.00 409.41 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L3964.71 1282.01 A1411.59 1411.59 0 0 0 3151.00 409.41 Z" style="stroke:none;fill:#1919FF"/>
+	<path d="M2622.21 1718.21 L3964.71 1282.01 A1411.59 1411.59 0 0 0 3151.00 409.41 Z" style="fill:none;stroke:#0000FF;stroke-width:6.00" clip-path="url(#clipPath_UyohMfmo)"/>
+	<defs>
+		<clipPath id="clipPath_spjHdNlS">
+			<path d="M2622.21 1718.21 L2003.40 2986.94 A1411.59 1411.59 0 0 0 3964.71 1282.01 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L2003.40 2986.94 A1411.59 1411.59 0 0 0 3964.71 1282.01 Z" style="stroke:none;fill:#FF5819"/>
+	<path d="M2622.21 1718.21 L2003.40 2986.94 A1411.59 1411.59 0 0 0 3964.71 1282.01 Z" style="fill:none;stroke:#FF4500;stroke-width:6.00" clip-path="url(#clipPath_spjHdNlS)"/>
+	<defs>
+		<clipPath id="clipPath_CEdTiNAS">
+			<path d="M2622.21 1718.21 L1332.65 2292.36 A1411.59 1411.59 0 0 0 2003.40 2986.94 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L1332.65 2292.36 A1411.59 1411.59 0 0 0 2003.40 2986.94 Z" style="stroke:none;fill:#FF8C19"/>
+	<path d="M2622.21 1718.21 L1332.65 2292.36 A1411.59 1411.59 0 0 0 2003.40 2986.94 Z" style="fill:none;stroke:#FF7F00;stroke-width:6.00" clip-path="url(#clipPath_CEdTiNAS)"/>
+	<defs>
+		<clipPath id="clipPath_qfgMQeJJ">
+			<path d="M2622.21 1718.21 L1232.06 1963.33 A1411.59 1411.59 0 0 0 1332.65 2292.36 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L1232.06 1963.33 A1411.59 1411.59 0 0 0 1332.65 2292.36 Z" style="stroke:none;fill:#19C58C"/>
+	<path d="M2622.21 1718.21 L1232.06 1963.33 A1411.59 1411.59 0 0 0 1332.65 2292.36 Z" style="fill:none;stroke:#00BF7F;stroke-width:6.00" clip-path="url(#clipPath_qfgMQeJJ)"/>
+	<defs>
+		<clipPath id="clipPath_vsgxKwMO">
+			<path d="M2622.21 1718.21 L1589.83 755.51 A1411.59 1411.59 0 0 0 1232.06 1963.33 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L1589.83 755.51 A1411.59 1411.59 0 0 0 1232.06 1963.33 Z" style="stroke:none;fill:#FFFF19"/>
+	<path d="M2622.21 1718.21 L1589.83 755.51 A1411.59 1411.59 0 0 0 1232.06 1963.33 Z" style="fill:none;stroke:#FFFF00;stroke-width:6.00" clip-path="url(#clipPath_vsgxKwMO)"/>
+	<defs>
+		<clipPath id="clipPath_dIGOiPkw">
+			<path d="M2622.21 1718.21 L2622.21 306.62 A1411.59 1411.59 0 0 0 1589.83 755.51 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M2622.21 1718.21 L2622.21 306.62 A1411.59 1411.59 0 0 0 1589.83 755.51 Z" style="stroke:none;fill:#198D19"/>
+	<path d="M2622.21 1718.21 L2622.21 306.62 A1411.59 1411.59 0 0 0 1589.83 755.51 Z" style="fill:none;stroke:#008000;stroke-width:6.00" clip-path="url(#clipPath_dIGOiPkw)"/>
+	<text x="2799.73" y="825.49" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Coal</text>
+	<text x="3308.68" y="1105.95" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Hydro</text>
+	<text x="3240.17" y="2459.50" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Natural Gas</text>
+	<text x="1942.65" y="2400.60" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Oil</text>
+	<text x="1785.88" y="2055.85" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Other (Biomass, Nuclear, Geo, and MW)</text>
+	<text x="1720.58" y="1480.07" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Solar</text>
+	<text x="2248.93" y="885.74" style="font-family:'Helvetica';font-size:89.94px;fill:#000000" text-anchor="middle">Wind</text>
+	<rect x="5244.41" y="1679.23" width="77.79" height="77.79" style="fill:#FFFFFF"/>
+	<rect x="5247.65" y="1682.47" width="71.31" height="71.31" style="fill:none;stroke:#FFFFFF;stroke-width:6.48"/>
+	<text x="2622.21" y="242.43" style="font-family:'Helvetica';font-size:157.44px;fill:#000000" text-anchor="middle">BAU (2020)</text>
+</svg>

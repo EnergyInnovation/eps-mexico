@@ -1,8 +1,7 @@
 Unit: dimensionless (rebate %),urban residential,rural residential,commercial
-heating,0.070,0.070,0.070
-cooling and ventilation,0.070,0.070,0.070
-envelope,0,0,0
-lighting,0,0,0
-appliances,0.138,0.138,0.138
-other component,0,0,0
-,,,
+heating,0.0700798131,0.0700798131,0.0700798131
+cooling and ventilation,0.0700798131,0.0700798131,0.0700798131
+envelope,0.0,0.0,0.0
+lighting,0.0,0.0,0.0
+appliances,0.1381278539,0.1381278539,0.1381278539
+other component,0.0,0.0,0.0

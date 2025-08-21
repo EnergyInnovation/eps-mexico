@@ -1,0 +1,11 @@
+:C Last updated February 2, 20245 at 11:35:05 PM EDT
+:C
+Additional EV Subsidy Percentage[passenger,LDVs] = 0.1
+Additional EV Subsidy Percentage[passenger,HDVs] = 0.1
+Additional EV Subsidy Percentage[freight,LDVs] = 0.1
+Additional EV Subsidy Percentage[freight,HDVs] = 0.1
+Percent Reduction in BAU Subsidies[jet fuel or kerosene] = 1
+Percent Reduction in BAU Subsidies[natural gas] = 1
+Percent Reduction in BAU Subsidies[petroleum diesel] = 1
+Percent Reduction in BAU Subsidies[petroleum gasoline] = 1
+Policy Implementation Schedule Selector = 2

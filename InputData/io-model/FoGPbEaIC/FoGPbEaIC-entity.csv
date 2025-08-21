@@ -1,29 +1,26 @@
 Unit: dimensionless (% of output purchased),government,nonenergy industries (MUST contain remainder),labor and consumers,foreign entities,electricity suppliers (NOT USED),coal suppliers (NOT USED),natural gas and petroleum suppliers (NOT USED),biomass and biofuel suppliers (NOT USED),other energy suppliers (NOT USED)
-agriculture and forestry 01T03,0.000223583,0.577193419,0.290492973,0.132090026,0,0,0,0,0
-coal mining 05,6.03564E-08,0.994901512,7.67935E-05,0.005021634,0,0,0,0,0
-oil and gas extraction 06,5.20666E-06,0.560177476,0.006624612,0.433192705,0,0,0,0,0
-other mining and quarrying 07T08,5.09619E-06,0.785440183,0.003383871,0.21117085,0,0,0,0,0
-food beverage and tobacco 10T12,2.33677E-05,0.223774665,0.700069408,0.076132559,0,0,0,0,0
-textiles apparel and leather 13T15,0,1,0,0,0,0,0,0,0
-wood products 16,0,1,0,0,0,0,0,0,0
-pulp paper and printing 17T18,0.006379941,0.653355239,0.259563066,0.080701754,0,0,0,0,0
-refined petroleum and coke 19,7.42927E-06,0.636277637,0.291780995,0.071933939,0,0,0,0,0
-chemicals 20,0.000200271,0.595665503,0.266958914,0.137175312,0,0,0,0,0
-rubber and plastic products 22,4.1854E-05,0.594178105,0.224612262,0.18116778,0,0,0,0,0
-glass and glass products 231,1.2913E-05,0.911284475,0.036156395,0.052546218,0,0,0,0,0
-cement and other nonmetallic minerals 239,2.22599E-05,0.847069083,0.062327654,0.090581003,0,0,0,0,0
-iron and steel 241,6.5098E-06,0.898601751,0.00289469,0.098497049,0,0,0,0,0
-other metals 242,1.31399E-05,0.795328935,0.005842895,0.19881503,0,0,0,0,0
-metal products except machinery and vehicles 25,0,1,0,0,0,0,0,0,0
-computers and electronics 26,0,1,0,0,0,0,0,0,0
-appliances and electrical equipment 27,0,1,0,0,0,0,0,0,0
-other machinery 28,0,1,0,0,0,0,0,0,0
-road vehicles 29,4.7676E-05,0.229243563,0.127120618,0.643588143,0,0,0,0,0
-nonroad vehicles 30,0,1,0,0,0,0,0,0,0
-other manufacturing 31T33,8.11505E-05,0.522364638,0.127590873,0.349963338,0,0,0,0,0
-energy pipelines and gas processing 352T353,0.012500036,0.987498843,1.12099E-06,0,0,0,0,0,0
-water and waste 36T39,0.000386404,0.430861892,0.568751704,0,0,0,0,0,0
-construction 41T43,0.00486775,0.993524919,0.001458299,0.000149033,0,0,0,0,0
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
+agriculture and forestry 01T03,0.000223583,0.5771934188,0.2904929725,0.1320900257,0,0,0,0,0
+coal mining 05,6.04e-08,0.9949015119,7.67935e-05,0.0050216343,0,0,0,0,0
+oil and gas extraction 06,5.2067e-06,0.5601774759,0.0066246121,0.4331927053,0,0,0,0,0
+other mining and quarrying 07T08,5.0962e-06,0.7854401835,0.0033838706,0.2111708498,0,0,0,0,0
+food beverage and tobacco 10T12,2.33677e-05,0.2237746648,0.7000694083,0.0761325592,0,0,0,0,0
+textiles apparel and leather 13T15,0.0,1.0,0.0,0.0,0,0,0,0,0
+wood products 16,0.0,1.0,0.0,0.0,0,0,0,0,0
+pulp paper and printing 17T18,0.0063799409,0.6533552387,0.259563066,0.0807017544,0,0,0,0,0
+refined petroleum and coke 19,7.4293e-06,0.6362776369,0.2917809949,0.0719339389,0,0,0,0,0
+chemicals 20,0.0002002712,0.5956655026,0.2669589143,0.1371753119,0,0,0,0,0
+rubber and plastic products 22,4.1854e-05,0.5941781046,0.2246122617,0.1811677797,0,0,0,0,0
+glass and glass products 231,1.2913e-05,0.9112844746,0.0361563948,0.0525462176,0,0,0,0,0
+cement and other nonmetallic minerals 239,2.22599e-05,0.8470690831,0.0623276543,0.0905810027,0,0,0,0,0
+iron and steel 241,6.5098e-06,0.8986017507,0.0028946904,0.0984970491,0,0,0,0,0
+other metals 242,1.31399e-05,0.7953289349,0.0058428955,0.1988150297,0,0,0,0,0
+metal products except machinery and vehicles 25,0.0,1.0,0.0,0.0,0,0,0,0,0
+computers and electronics 26,0.0,1.0,0.0,0.0,0,0,0,0,0
+appliances and electrical equipment 27,0.0,1.0,0.0,0.0,0,0,0,0,0
+other machinery 28,0.0,1.0,0.0,0.0,0,0,0,0,0
+road vehicles 29,4.7676e-05,0.2292435632,0.1271206181,0.6435881427,0,0,0,0,0
+nonroad vehicles 30,0.0,1.0,0.0,0.0,0,0,0,0,0
+other manufacturing 31T33,8.11505e-05,0.5223646384,0.1275908729,0.3499633382,0,0,0,0,0
+energy pipelines and gas processing 352T353,0.0125000359,0.9874988431,1.121e-06,0.0,0,0,0,0,0
+water and waste 36T39,0.0003864036,0.4308618922,0.5687517042,0.0,0,0,0,0,0
+construction 41T43,0.0048677498,0.9935249189,0.0014582986,0.0001490328,0,0,0,0,0

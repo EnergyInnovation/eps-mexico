@@ -1,10 +1,10 @@
 Unit: dimensionless (% of debt held),Share of Debt Held
-government,0
-nonenergy industries,0.390
-labor and consumers,0.010
-foreign entities,0.600
-electricity suppliers,0
-coal suppliers,0
-natural gas and petroleum suppliers,0
-biomass and biofuel suppliers,0
-other energy suppliers,0
+government,0.0
+nonenergy industries,0.3913916521
+labor and consumers,0.0072871258
+foreign entities,0.6013212221
+electricity suppliers,0.0
+coal suppliers,0.0
+natural gas and petroleum suppliers,0.0
+biomass and biofuel suppliers,0.0
+other energy suppliers,0.0
