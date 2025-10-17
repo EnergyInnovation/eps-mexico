@@ -1,12 +1,7 @@
-Number of Vehicles,battery electric vehicle,natural gas vehicle,gasoline vehicle,diesel vehicle,plugin hybrid vehicle,LPG vehicle,hydrogen vehicle,,
-LDVs,7.48E+03,1.00E+04,3.31E+07,6.15E+05,2.24E+04,1.41E+05,0.00E+00,,
-HDVs,5.40E+01,7.20E+01,2.37E+05,4.40E+03,1.61E+02,1.01E+03,0.00E+00,,
-aircraft,0.00E+00,0.00E+00,0.00E+00,3.58E+02,0.00E+00,0.00E+00,0.00E+00,,
-rail,3.84E+02,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00,,
-ships,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00,,
-motorbikes,2.92E+04,0.00E+00,5.81E+06,0.00E+00,0.00E+00,0.00E+00,0.00E+00,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
+Number of Vehicles,battery electric vehicle,natural gas vehicle,gasoline vehicle,diesel vehicle,plugin hybrid vehicle,LPG vehicle,hydrogen vehicle
+LDVs,7.48E+03,1.00E+04,3.31E+07,6.15E+05,2.24E+04,1.41E+05,0.00E+00
+HDVs,5.36E+01,7.17E+01,2.37E+05,4.40E+03,1.61E+02,1.01E+03,0.00E+00
+aircraft,0.00E+00,0.00E+00,0.00E+00,3.58E+02,0.00E+00,0.00E+00,0.00E+00
+rail,3.84E+02,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00
+ships,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00,0.00E+00
+motorbikes,2.92E+04,0.00E+00,5.81E+06,0.00E+00,0.00E+00,0.00E+00,0.00E+00
